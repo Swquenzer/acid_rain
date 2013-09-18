@@ -1,0 +1,73 @@
+h1 {
+	font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+	display: inline-block;
+	padding: 15px;
+	border: 1px solid black;
+	-webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+	
+}
+body {
+	background: beige;
+}
+#wrapper{
+	margin: auto;
+	height: auto;
+	width: 900px;
+}
+header {
+	margin: 0px auto 20px;
+	width: 800px;
+	background: white;
+	border: solid grey 1px;
+}
+#main {
+	margin: auto;
+	padding: 25px;
+	height: 800px;
+	width: 750px;
+	background: white;
+	
+	-webkit-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 0px 15px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 0px 15px rgba(50, 50, 50, 0.5);
+	-webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+#chemical_spreadsheet {
+	margin: auto;
+	width: 700px;
+	border-collapse: collapse;
+}
+#chemical_spreadsheet th {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	text-align: left;
+	color: #0E3B0D;
+	padding: 10px 0 0px 10px;
+	background: #7EDC7E;
+	
+	border-bottom: 4px solid #61C261;
+}
+#chemical_spreadsheet #th_left {
+	-webkit-border-radius: 10px 0px 0px 0px;
+    border-radius: 10px 0px 0px 0px;
+}
+#chemical_spreadsheet #th_right {
+	-webkit-border-radius: 0px 10px 0px 0px;
+    border-radius: 0px 10px 0px 0px;
+}
+#chemical_spreadsheet td {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #146E14;
+	padding: 7px 10px;
+	border-top: 1px solid white;
+	background: #DFFFDE;
+}
+#chemical_spreadsheet tr:hover td{
+	color: #0E3B0D;
+	background: #C1F2BF;
+}
+#chemical_spreadsheet tfoot {
+	text-align: center;
+}
