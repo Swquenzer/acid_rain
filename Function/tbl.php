@@ -14,7 +14,7 @@ require("logger.php");
 				$_REQUEST['page'] = 1;
 				}
                 //** the below string is an example of a json string for a single record
-                $sampleStr = "[{\"length\":1,\"Room\":35, \"Location\":\"room\", \"Name\":\"Acacia\", \"Size\":\"350\", \"Units\":\"g\"}]";
+                $sampleStr = "[{\"Room\":35, \"Location\":\"room\", \"Name\":\"Acacia\", \"Size\":\"350\", \"Units\":\"g\"},{\"Room\":\"25a\", \"Location\":\"refrigirator door shelf 3\", \"Name\":\"Accrylamide\", \"Size\":\"300\", \"Units\":\"ml\"}]";
                 echo $_REQUEST['callback'],"(",$sampleStr,");";
                 //!*
                 
