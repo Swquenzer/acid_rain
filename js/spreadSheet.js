@@ -25,7 +25,7 @@ function getData(handler, callBkStr, paramStr, allowCache) {
 
     //retrieve the old script tag (if it exists) and then create a tag with the new request url 
     var oScriptElement = document.getElementById("getData");
-    var nScriptElement = document.createElement("getData");
+    var nScriptElement = document.createElement("script");
     nScriptElement.setAttribute("src", url);
     nScriptElement.setAttribute("id", "getData");
 
