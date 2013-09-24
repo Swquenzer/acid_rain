@@ -34,6 +34,32 @@ header {
 	-webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
 }
+#searchChem fieldset{
+	width: 75%;
+	padding: 5px;
+	margin: 0 auto 10px;
+	background: #EBF7ED;
+}
+#searchChem p {
+	display: block;
+	margin: auto auto;
+	padding: 5px;
+	background: white;
+	border: 1px solid #DBDBDB;
+}
+#searchCenter {
+	display: inline-block;
+	margin-left: 80px;
+}
+#searchChem label {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+#searchChem input[type="search"] {
+	padding: 7px;
+	margin: 5px;
+}
+
+/* CHEMICAL SPREADSHEET STYLES */
 #chemical_spreadsheet {
 	margin: auto;
 	width: 700px;
