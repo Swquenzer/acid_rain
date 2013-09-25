@@ -5,6 +5,12 @@ body {
 	background-image: url('../gfx/geometry.gif');
 	margin: 0px;
 }
+header {
+	margin: 0px 0px 20px;
+	background: #1B291B;
+	border-bottom: solid grey 1px;
+	
+}
 header h1 {
 	margin: auto;
 	padding: 20px 0;
@@ -17,19 +23,10 @@ header h1 {
 	-webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
 }
-#wrapper{
-	margin: auto;
-	height: auto;
-	width: 900px;
-	z-index: 10;
+header img {
+	margin-right: 20px;
 }
-header {
-	margin: 0px 0px 20px;
-	background: #1B291B;
-	border-bottom: solid grey 1px;
-	
-}
-#navMenu {
+header #navMenu {
 	display: block;
 	padding: 1px;
 	font-size: 24px;
@@ -37,26 +34,32 @@ header {
 	color: #638566;
 	background: #DCE8DD;
 }
-#navMenu ul {
+header #navMenu ul {
 	display: block;
 	width: 50%;
 	margin: 0 auto;
 	padding: 10px 0;
 	text-align: center; /* Causes child inline-block elements to be centered (even if not centered) */
 }
-#navMenu li {
+header #navMenu li {
 	display: inline-block;
 	padding: 0 20px;
 	list-style-type: none;
 	font-weight: bold;
 	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 }
-#navMenu a {
+header #navMenu a {
 	text-decoration: none;
 	color: #638566;
 }
-#navMenu a:hover {
+header #navMenu a:hover {
 	color: #3E523F;
+}
+#wrapper{
+	margin: auto;
+	height: auto;
+	width: 900px;
+	z-index: 10;
 }
 #main {
 	margin: auto;
