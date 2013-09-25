@@ -38,15 +38,23 @@ header {
 #navMenu ul {
 	display: block;
 	width: 50%;
-	margin: 10px auto;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center; /* Causes child inline-block elements to be centered (even if not centered) */
 }
 #navMenu li {
-	display: inline;
-	margin: auto;
+	display: inline-block;
+	padding: 0 20px;
 	list-style-type: none;
 	font-weight: bold;
 	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
-	padding: 0 40px;
+}
+#navMenu a {
+	text-decoration: none;
+	color: #638566;
+}
+#navMenu a:hover {
+	color: #3E523F;
 }
 #main {
 	margin: auto;
@@ -72,12 +80,12 @@ header {
 	display: block;
 	margin: auto auto;
 	padding: 5px;
+	text-align: center;
 	background: white;
 	border: 1px solid #DBDBDB;
 }
 #searchCenter {
 	display: inline-block;
-	margin-left: 120px;
 }
 #searchChem label {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
