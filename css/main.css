@@ -1,19 +1,21 @@
-
-h1 {
+.center {
+	text-align: center;
+}
+body {
+	background: beige;
+	margin: 0px;
+}
+header h1 {
+	margin: auto;
+	padding: 20px 0;
+	display: block;
 	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	font-size: 60px;
 	font-weight: lighter;
 	letter-spacing: 5px;
 	color: #DCE8DD;
-	display: inline-block;
-	margin-left: 60px;
 	-webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-	
-}
-body {
-	background: beige;
-	margin-top: 0px;
 }
 #wrapper{
 	margin: auto;
@@ -21,8 +23,7 @@ body {
 	width: 900px;
 }
 header {
-	margin: 0px auto 20px;
-	width: 900px;
+	margin: 0px 0px 20px;
 	background: #1B291B;
 	border-bottom: solid grey 1px;
 	
