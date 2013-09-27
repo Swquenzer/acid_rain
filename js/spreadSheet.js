@@ -13,10 +13,10 @@ function returnTable(recSet) {
     var tbody = document.createElement("tbody");
     
     //retrieve the old tbody element
-    var oBody = document.getElementById("chemicals");
+    var oBody = document.getElementById("chemical_spreadsheet_body");
 
     //assign the id to the new tbody element
-    tbody.setAttribute("id", "chemicals")
+    tbody.setAttribute("id", "chemical_spreadsheet_body")
 
     //retrieve the containing table to perform the swap or insert
     var table = document.getElementById("chemical_spreadsheet");
