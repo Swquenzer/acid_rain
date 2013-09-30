@@ -6,6 +6,7 @@
 	<meta name="description" content="Project Acid Rain">
 	<meta name="author" content="Stephen Quenzer">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/main.js"></script>
     <script src="js/spreadSheet.js"></script>
 	<!--[if lt IE 9]>
@@ -31,8 +32,8 @@
 				<fieldset>
 					<p><span class="searchCenter">
 						<label for="search">Chemical Search: </label>
-						<input type="search" id="chemSearchInput" name="search" placeholder="Acenaphthene">
-						<input type="submit" value="Search">
+						<input type="search" id="chemSearchInput" name="search" placeholder="Acenaphthene" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Acenaphthene'" />
+						<input type="submit" value="Search" />
 					</span></p>
 				</fieldset>
 			</form>
