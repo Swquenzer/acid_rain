@@ -6,7 +6,7 @@ require("logger.php");
 
 
 //  require a php file to create the connection to the sql server
-//	require('../admin/AcidRainDBLogin.php');
+	//require('../admin/AcidRainDBLogin.php');
 
 	switch(($_REQUEST['callback'])){
 		case "returnTable":
