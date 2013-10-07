@@ -6,6 +6,12 @@
 	<meta name="description" content="Project Acid Rain">
 	<meta name="author" content="Stephen Quenzer">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	function printPage()
+	{
+		window.print();
+	}
+	</script>
 	<link rel="stylesheet" href="css/print.css">
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,6 +19,7 @@
 </head>
 <body>
 	<section id="main">
+		<input type="button" value="Print" onclick="printPage()">
 		<h2>Displaying 7 results for "Sodium Chloride":</h2>
 		<table id="results_spreadsheet">
 			<thead>

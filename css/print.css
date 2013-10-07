@@ -9,11 +9,23 @@ body {
 #main {
 	margin: auto;
 	padding: 25px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	width: 900px;
 	background: white;
 	z-index: 10;
 	text-align: center;
+}
+
+#main input {
+	display: block;
+	float: right;
+	margin-right: 50px;
+}
+
+#main h2 {
+	display: block;
+	float: left;
+	margin: 0px 0px 35px 0px;
 }
 
 /* RESULTS SPREADSHEET STYLES */
@@ -43,4 +55,11 @@ body {
 #results_spreadsheet tfoot {
 	text-align: center;
 	border-top: 2px solid #61C261;
+}
+
+/* PRINT STYLES */
+@media print {
+   #main input {
+		display: none;
+	}
 }
