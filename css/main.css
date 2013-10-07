@@ -73,7 +73,7 @@ header #navMenu a:hover {
 	-moz-box-shadow:    	0px 0px 15px rgba(50, 50, 50, 0.5);
 	box-shadow:         	0px 0px 15px rgba(50, 50, 50, 0.5);
 	-webkit-border-radius: 	10px 10px 10px 10px;
-    border-radius: 			10px 10px 10px 10px;
+	border-radius: 		10px 10px 10px 10px;
 	border: 1px solid grey;
 }
 #searchChem fieldset{
@@ -118,11 +118,11 @@ header #navMenu a:hover {
 }
 #chemical_spreadsheet #th_left {
 	-webkit-border-radius: 10px 0px 0px 0px;
-    border-radius: 10px 0px 0px 0px;
+	border-radius: 10px 0px 0px 0px;
 }
 #chemical_spreadsheet #th_right {
 	-webkit-border-radius: 0px 10px 0px 0px;
-    border-radius: 0px 10px 0px 0px;
+	border-radius: 0px 10px 0px 0px;
 }
 #chemical_spreadsheet td {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -168,4 +168,31 @@ footer a, footer a:visited {
 }
 footer a:hover {
 	color: black;
+}
+
+/* Formatting */
+h1 {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 100;
+	color: #1B291B;
+	margin-top: 0px;
+}
+h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: #233623;
+}
+hr {
+	width: 90%;
+	color: beige;
+}
+p {
+	margin-left: 20px;
+	line-height: 25px;
+	color: #638566;
+}
+#content {
+	display: block;
+	width: 80%;
+	margin: auto;
 }
