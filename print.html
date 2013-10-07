@@ -6,8 +6,7 @@
 	<meta name="description" content="Project Acid Rain">
 	<meta name="author" content="Stephen Quenzer">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-    <script src="js/spreadSheet.js"></script>
+	<link rel="stylesheet" href="css/print.css">
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -18,17 +17,28 @@
 		<table id="results_spreadsheet">
 			<thead>
 				<tr>
-					<th scope="col" id="th_left">Room</th>
+					<th scope="col">Room</th>
 					<th scope="col">Location</th>
 					<th scope="col">Quantity
 					<th scope="col">Name</th>
 					<th scope="col">Amount</th>
 					<th scope="col">Manufacturer</th>
-					<th scope="col" id="th_right">Date</th>
+					<th scope="col">Date</th>
 				</tr>
 			</thead>
-			<tbody id="chemical_spreadsheet_body">
+			<tfoot>
 				<tr>
+					<td></th>
+					<td></th>
+					<td></th>
+					<td></th>
+					<td></th>
+					<td></th>
+					<td></th>
+				</tr>
+			</tfoot>
+			<tbody id="results_spreadsheet_body">
+				<tr class="odd">
 					<td>N / A</td>
 					<td>N / A</td>
 					<td>N / A</td>
@@ -46,7 +56,7 @@
 					<td>Sigma</td>
 					<td>N / A</td>
 				</tr>
-				<tr>
+				<tr class="odd">
 					<td>22</td>
 					<td>Cabinet B</td>
 					<td>N / A</td>
@@ -64,7 +74,7 @@
 					<td>Fisher</td>
 					<td>N / A</td>
 				</tr>
-				<tr>
+				<tr class="odd">
 					<td>22</td>
 					<td>Cabinet B</td>
 					<td>N / A</td>
@@ -82,7 +92,7 @@
 					<td>N / A</td>
 					<td>N / A</td>
 				</tr>
-				<tr>
+				<tr class="odd">
 					<td>35</td>
 					<td>Storeroom Inorganic</td>
 					<td>N / A</td>
