@@ -1,0 +1,46 @@
+.center {
+	text-align: center;
+}
+body {
+	margin: 0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#main {
+	margin: auto;
+	padding: 25px;
+	padding-bottom: 40px;
+	width: 900px;
+	background: white;
+	z-index: 10;
+	text-align: center;
+}
+
+/* RESULTS SPREADSHEET STYLES */
+#results_spreadsheet {
+	margin: auto;
+	width: 900px;
+	text-align: left;
+	border-collapse: collapse;
+}
+#results_spreadsheet th {
+	text-align: left;
+	border-bottom: 3px solid #61C261;
+	padding: 5px;
+	font-size: 16px;	
+	font-weight: normal;
+}
+
+#results_spreadsheet td {
+	font-size: 12px;
+	padding: 7px;
+}
+
+#results_spreadsheet tr.odd {
+	background: #F4F4F4;
+}
+
+#results_spreadsheet tfoot {
+	text-align: center;
+	border-top: 2px solid #61C261;
+}
