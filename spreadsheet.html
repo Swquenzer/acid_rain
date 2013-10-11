@@ -1,3 +1,12 @@
+<!--<?php
+session_start();
+
+if( !isset( $_REQUEST["loggedIn"] ) )
+{
+    header( "Location: index.php" );
+}
+
+?>-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,9 +37,9 @@
 	</header>
 	<div id="wrapper">
 		<section id="main">
-			<form id="searchChem" action="" method="post">
+			<form id="inputField" action="" method="post">
 				<fieldset>
-					<p><span class="searchCenter">
+					<p><span class="inputFieldCenter">
 						<label for="search">Chemical Search: </label>
 						<input type="search" id="chemSearchInput" name="search" placeholder="Acenaphthene" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Acenaphthene'" />
 						<input type="submit" value="Search" />
