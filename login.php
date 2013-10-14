@@ -4,13 +4,15 @@ $errorMessage = "";
 
 if( isset( $_POST["submit"] ) )
 {
-    if( $_REQUEST["password"] != "testpassword" )
-        $errorMessage = "Invalid username or password.";
+    if( $_REQUEST["password"] == "testpassword" )
+	{
+        $_SESSION["loggedIn"] = true;
+        header( "Location: spreadsheet.php" );
+	}
 
     else
     {
-        $_SESSION['loggedIn'] = true;
-        header( "Location: spreadsheet.html" );
+        $errorMessage = "Invalid username or password.";
     }
 }
 
@@ -36,7 +38,7 @@ if( isset( $_POST["submit"] ) )
 				<ul>
 					<li><a href="index.html">Home</a></li>|
 					<li><a href="info.html">Info</a></li>|
-					<li><a href="spreadsheet.html">Spreadsheet</a></li>
+					<li><a href="spreadsheet.php">Spreadsheet</a></li>
 				</ul>
 			</nav>
 		</span>
