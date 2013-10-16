@@ -196,3 +196,6 @@ p {
 	width: 80%;
 	margin: auto;
 }
+.activePage {
+	color: black !important;
+}
