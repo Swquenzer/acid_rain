@@ -1,3 +1,22 @@
+<?php
+session_start();
+$errorMessage = "";
+
+if( isset( $_POST["submit"] ) )
+{
+    if( $_REQUEST["password"] == "testpassword" )
+	{
+        $_SESSION["loggedIn"] = true;
+        header( "Location: spreadsheet.php" );
+	}
+
+    else
+    {
+        $errorMessage = "Invalid username or password.";
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +38,7 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>|
 					<li><a href="info.html">Info</a></li>|
-					<li><a href="spreadsheet.html">Spreadsheet</a></li>
+					<li><a href="spreadsheet.php">Spreadsheet</a></li>
 				</ul>
 			</nav>
 		</span>
@@ -27,18 +46,21 @@
 	<div id="wrapper">
 		<section id="main">
 			<h1>Login</h1>
-			<p>Login form goes here</p>
+			<p id="errorMessage"><?php echo $errorMessage; ?></p>
+			<form id="inputField" action="login.php" method="post">
+				<fieldset>
+					<p><span class="inputFieldCenter">
+						<label for="password">Enter Password: </label>
+						<input type="password" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" />
+						<input type="submit" name="submit" value="Login" />
+					</span></p>
+				</fieldset>
+			</form>
 		</section>
 	</div><!--End Wrapper-->
 	<footer>
 	<span id="footerContent">
 	<a href="http://www.emu.edu"><img src="gfx/emu.png" width="200px" height="80px"></a>
-	<ul>
-		<li><a href="#">Link 1</a></li>
-		<li> &nbsp; | &nbsp; <a href="#">Link 2</a></li>
-		<li> &nbsp; | &nbsp; <a href="#">Link 3</a></li>
-		<li> &nbsp; | &nbsp; <a href="#">Link 4</a></li>
-	</ul>
 	</span>
 	</footer>
 <!-- KEEP JAVASCRIPT AT END OF BODY -->

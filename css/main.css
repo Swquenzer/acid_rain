@@ -76,13 +76,13 @@ header #navMenu a:hover {
 	border-radius: 		10px 10px 10px 10px;
 	border: 1px solid grey;
 }
-#searchChem fieldset{
+#inputField fieldset{
 	width: 670px;
 	padding: 5px;
 	margin: 0 auto 10px;
 	background: #EBF7ED;
 }
-#searchChem p {
+#inputField p {
 	display: block;
 	margin: auto auto;
 	padding: 5px;
@@ -90,15 +90,21 @@ header #navMenu a:hover {
 	background: white;
 	border: 1px solid #DBDBDB;
 }
-#searchCenter {
+#inputFieldCenter {
 	display: inline-block;
 }
-#searchChem label {
+#inputField label {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
-#searchChem input[type="search"] {
+#inputField input {
 	padding: 7px;
 	margin: 5px;
+}
+
+#errorMessage {
+	text-align: center;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: red;
 }
 
 /* CHEMICAL SPREADSHEET STYLES */
