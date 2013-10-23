@@ -12,29 +12,26 @@ require("logger.php");
 		case "returnTable":
 			if (!isset($_REQUEST['page'])){
 				$_REQUEST['page'] = 1;
-				}
-                //** the below string is an example of a json string for a single record
-                $sampleStr = "[{\"Room\":35, \"Location\":\"room\", \"Name\":\"Acacia\", \"Size\":\"350\", \"Units\":\"g\"},{\"Room\":\"25a\", \"Location\":\"refrigirator door shelf 3\", \"Name\":\"Accrylamide\", \"Size\":\"300\", \"Units\":\"ml\"}]";
-                echo $_REQUEST['callback'],"(",$sampleStr,");";
-                //!*
+			}
                 
-				/*$sql="SELECT inventory.Room, invetory.Location, chemical.Name,inventory.Size, inventory.Units FROM inventory LEFT JOIN chemical ON inventory.ChemicalID = chemical.ID;";
-                $stmt =  $db->query("CALL Get_Spreadsheet()");
-				$numRecs = $stmt->num_rows;
-               
-				$offset = $_SESSION['perPage'] * ($_REQUEST['page']-1);
-				if ($stmt->data_seek($offset)){
-					$rslt = array();
-					for($i=0; $i < $_SESSION['perPage']; $i++){
-						$rslt[] = $stmt->fetch_array($resulttype= MYSQLI_ASSOC);
-						if ($rslt[$i] == null){
-							unset($rslt[$i]);
-							break;
-						}                       
-					}
-					$stmt->close();
-					echo $_REQUEST['callback'],"(" ,json_encode($rslt), ");";
-				}*/
+			$sql="SELECT inventory.Room, inventory.Location, chemical.Name,inventory.Size, inventory.Units FROM inventory LEFT JOIN chemical ON inventory.ChemicalID = chemical.ID;";
+            $stmt =  $db->query("CALL Get_Spreadsheet()");
+			$numRecs = $stmt->num_rows;
+
+			$offset = 0; //$_SESSION['perPage'] * ($_REQUEST['page']-1);
+			if ($stmt->data_seek($offset)){
+				$rslt = array();
+				for($i=0; $i < $rslt.length /* $_SESSION['perPage'] */; $i++){
+					$rslt[] = $stmt->fetch_array($resulttype= MYSQLI_ASSOC);
+					if ($rslt[$i] == null){
+						unset($rslt[$i]);
+						break;
+					}                       
+				}
+				
+				$stmt->close();
+				echo $_REQUEST['callback'],"(" ,json_encode($rslt), ");";
+			}
                 
 			break;
 
