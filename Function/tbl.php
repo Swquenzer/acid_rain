@@ -17,11 +17,13 @@ require("logger.php");
 			$sql="SELECT inventory.Room, inventory.Location, chemical.Name,inventory.Size, inventory.Units FROM inventory LEFT JOIN chemical ON inventory.ChemicalID = chemical.ID;";
             $stmt =  $db->query("CALL Get_Spreadsheet()");
 			$numRecs = $stmt->num_rows;
+			
+			slog($db->error);
 
 			$offset = 0; //$_SESSION['perPage'] * ($_REQUEST['page']-1);
 			if ($stmt->data_seek($offset)){
 				$rslt = array();
-				for($i=0; $i < $rslt.length /* $_SESSION['perPage'] */; $i++){
+				for($i=0; $i < $numRecs /* $_SESSION['perPage'] */; $i++){
 					$rslt[] = $stmt->fetch_array($resulttype= MYSQLI_ASSOC);
 					if ($rslt[$i] == null){
 						unset($rslt[$i]);
