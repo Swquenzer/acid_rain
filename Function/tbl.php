@@ -14,9 +14,11 @@ require("logger.php");
 				$_REQUEST['page'] = 1;
 			}
                 
-			//$sql="SELECT inventory.Room, inventory.Location, chemical.Name,inventory.Size, inventory.Units FROM inventory LEFT JOIN chemical ON inventory.ChemicalID = chemical.ID;";
+			$sql="SELECT inventory.Room, inventory.Location, chemical.Name,inventory.Size, inventory.Units FROM inventory LEFT JOIN chemical ON inventory.ChemicalID = chemical.ID;";
             $stmt =  $db->query("CALL Get_Spreadsheet()");
 			$numRecs = $stmt->num_rows;
+			
+			slog($db->error);
 
 			$offset = 0; //$_SESSION['perPage'] * ($_REQUEST['page']-1);
 			if ($stmt->data_seek($offset)){
