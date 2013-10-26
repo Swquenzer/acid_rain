@@ -5,6 +5,7 @@
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
     getData("function/tbl.php", "returnTable", "page=1", true);
+    //getData("function/tbl.php", "simErr", "", true);
 };
 
 function returnTable(recSet) {
@@ -16,7 +17,7 @@ function returnTable(recSet) {
     var oBody = document.getElementById("chemical_spreadsheet_body");
 
     //assign the id to the new tbody element
-    tbody.setAttribute("id", "chemical_spreadsheet_body")
+    tbody.setAttribute("id", "chemical_spreadsheet_body");
 
     //retrieve the containing table to perform the swap or insert
     var table = document.getElementById("chemical_spreadsheet");
@@ -35,3 +36,18 @@ function returnTable(recSet) {
 
 }
 
+function loadError() {
+    ///<summary>In the event that the database query does not execute correctly replaces the table with error text</summary>
+
+    //create a paragraph element to display the message
+    var errMsg = document.createElement("p");
+    var errString = "An error was encountered trying to load your data.";
+    errMsg.setAttribute("id", "loadErr");
+    errMsg.innerHTML=errString;
+
+    var parent = document.getElementById("main");
+    var table = document.getElementById("chemical_spreadsheet");
+
+    parent.removeChild(table);
+    parent.appendChild(errMsg);
+}

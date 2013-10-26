@@ -179,6 +179,6 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	</span>
 	</footer>
 <!-- KEEP JAVASCRIPT AT END OF BODY -->
-<script src="js/scripts.js"></script>
+<!--<script src="js/scripts.js"></script>-->
 </body>
 </html>
