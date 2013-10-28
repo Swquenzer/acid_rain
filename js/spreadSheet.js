@@ -4,8 +4,8 @@
 
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
-    getData("function/tbl.php", "returnTable", "page=1", true);
-    //getData("function/tbl.php", "simErr", "", true);
+    //getData("function/tbl.php", "returnTable", "page=1", true);
+    getData("function/tbl.php", "simErr", "", true);
 };
 
 function returnTable(recSet) {
@@ -41,7 +41,7 @@ function loadError() {
 
     //create a paragraph element to display the message
     var errMsg = document.createElement("p");
-    var errString = "An error was encountered trying to load your data.";
+    var errString = "<p id='spreadsheetError'>An error was encountered trying to load your data.</p>";
     errMsg.setAttribute("id", "loadErr");
     errMsg.innerHTML=errString;
 
