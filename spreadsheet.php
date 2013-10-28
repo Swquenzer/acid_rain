@@ -43,7 +43,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	</header>
 	<div id="wrapper">
 		<section id="main">
-			<form id="inputField" action="" method="post">
+			<form class="inputField" action="" method="post">
 				<fieldset>
 					<p><span class="inputFieldCenter">
 						<label for="search">Chemical Search: </label>

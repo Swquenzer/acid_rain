@@ -76,13 +76,13 @@ header #navMenu a:hover {
 	border-radius: 		10px 10px 10px 10px;
 	border: 1px solid grey;
 }
-#inputField fieldset{
+.inputField fieldset{
 	width: 670px;
 	padding: 5px;
 	margin: 0 auto 10px;
 	background: #EBF7ED;
 }
-#inputField p {
+.inputField p {
 	display: block;
 	margin: auto auto;
 	padding: 5px;
@@ -93,12 +93,17 @@ header #navMenu a:hover {
 #inputFieldCenter {
 	display: inline-block;
 }
-#inputField label {
+.inputField label {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
-#inputField input {
+.inputField input {
 	padding: 7px;
 	margin: 5px;
+}
+
+#addInv p{
+	text-align: left;
+	padding-left: 30px;
 }
 
 #errorMessage {
