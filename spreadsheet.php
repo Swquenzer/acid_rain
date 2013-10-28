@@ -1,18 +1,16 @@
 <?php
 
-//session_start();
+session_start();
 
-print isset($_COOKIE['acidRainRememberLogin']);
-/*
-if($_COOKIE['acidRainRememberLogin'] == "8a409cc44e752b72df5598d5240c23752b60888059961c2966754fa711845e25")
+if(isset($_COOKIE['acidRainRememberLogin']) && $_COOKIE['acidRainRememberLogin'] == "8a409cc44e752b72df5598d5240c23752b60888059961c2966754fa711845e25")
 {
-	//$_SESSION["loggedIn"] == true;
+	$_SESSION["loggedIn"] = true;
 }
-echo $_COOKIE['acidRainRememberLogin'];
-//if( !isset( $_SESSION["loggedIn"] ) )
+
+if( !isset( $_SESSION["loggedIn"] ) )
 {
-   // header( "Location: login.php" );
-}*/
+    header( "Location: login.php" );
+}
 
 ?>
 <!doctype html>

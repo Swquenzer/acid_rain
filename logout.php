@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-setcookie ("acidRainRememberLogin", "", time() - 3600);
+if( isset($_COOKIE['acidRainRememberLogin']) ) setcookie("acidRainRememberLogin", "", 1);
 session_destroy();
 
 header( "Location: index.html" );
