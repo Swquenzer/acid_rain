@@ -7,6 +7,10 @@ if( isset( $_POST["submit"] ) )
     if( $_REQUEST["password"] == "testpassword" )
 	{
         $_SESSION["loggedIn"] = true;
+		
+		if( isset( $_POST["remember"] ) )
+			setcookie("acidRainRememberLogin", "8a409cc44e752b72df5598d5240c23752b60888059961c2966754fa711845e25", time() + 60 * 60 * 24 * 365);
+		
         header( "Location: spreadsheet.php" );
 	}
 
@@ -53,6 +57,8 @@ if( isset( $_POST["submit"] ) )
 						<label for="password">Enter Password: </label>
 						<input type="password" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" />
 						<input type="submit" name="submit" value="Login" />
+						<input type="checkbox" name="remember" checked="true">
+						<label for="remember">Stay logged in</label>
 					</span></p>
 				</fieldset>
 			</form>

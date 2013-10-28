@@ -17,7 +17,7 @@ require("logger.php");
             if(!$stmt == false){
                 slog($db->error);
 			    $numRecs = $stmt->num_rows;
-            
+			
 			    $offset = 0; //$_SESSION['perPage'] * ($_REQUEST['page']-1);
 			    if ($stmt->data_seek($offset)){
 				    $rslt = array();
