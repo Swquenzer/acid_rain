@@ -51,7 +51,7 @@ if( isset( $_POST["submit"] ) )
 		<section id="main">
 			<h1>Login</h1>
 			<p id="errorMessage"><?php echo $errorMessage; ?></p>
-			<form id="inputField" action="login.php" method="post">
+			<form class="inputField" action="login.php" method="post">
 				<fieldset>
 					<p><span class="inputFieldCenter">
 						<label for="password">Enter Password: </label>
