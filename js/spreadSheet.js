@@ -4,8 +4,7 @@
 
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
-    //getData("function/tbl.php", "returnTable", "page=1", true);
-    getData("function/tbl.php", "simErr", "", true);
+    getData("function/tbl.php", "returnTable", "page=1", true);
 };
 
 function returnTable(recSet) {
