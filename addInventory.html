@@ -27,25 +27,25 @@
 	</header>
 	<div id="wrapper">
 		<section id="main">
-			<form id="addInv">
-                <label id="manufacturerLbl">Manufacturer</label>
-                <input list="manufactures" name="manufacturer" />
-                
-                <label id="chemicalsLbl">Chemical</label>
-                <input list="chemicals" name="chemical" />
-
-                <label id="roomLbl">Room</label>
-                <input list="rooms" name="room" />
-
-                <!--these will be filled by javascript when the page loads-->
-                <datalist id="manufacturers">
-                </datalist>
-                <datalist id="chemicals">
-                </datalist>
-                <datalist id="rooms">
-                </datalist>
-
-			</form>
+			<form class="inputField" id="addInv"><fieldset>
+				<p>
+				<label id="manufacturerLbl">Manufacturer</label>
+				<input list="manufactures" name="manufacturer" />
+				</p><p>
+				<label id="chemicalsLbl">Chemical</label>
+				<input list="chemicals" name="chemical" />
+				</p><p>
+				<label id="roomLbl">Room</label>
+				<input list="rooms" name="room" />
+				</p>
+				<!--these will be filled by javascript when the page loads-->
+				<datalist id="manufacturers">
+				</datalist>
+				<datalist id="chemicals">
+				</datalist>
+				<datalist id="rooms">
+				</datalist>
+			</fieldset></form>
 		</section>
 	</div><!--End Wrapper-->
 	<footer>
