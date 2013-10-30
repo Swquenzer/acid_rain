@@ -16,7 +16,9 @@
 ******************************************************/
 function slog($entry)
 {
-	$head = $_SERVER['REQUEST_TIME']. ':   ';
+date_default_timezone_set('America/New_York');
+//$head = $_SERVER['REQUEST_TIME']. ':   ';
+$head = "[".date("g:i a")."]:";
 $file = 'log.log';	
 // Open the file to get existing content
 $current = file_get_contents($file);
