@@ -106,7 +106,7 @@ header #navMenu a:hover {
 	padding-left: 30px;
 }
 
-#errorMessage {
+#spreadsheetError {
 	text-align: center;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	color: red;
