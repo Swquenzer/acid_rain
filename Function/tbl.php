@@ -38,25 +38,12 @@ require("logger.php");
             }
                 
 			break;
-        case "addInventoryLoad":
-            $stmt =  $db->query("CALL Add_Inventory_preload()");
-            if(!$stmt == false){
-                slog($db->error);
-			    $numRecs = $stmt->num_rows;
-                for($i=0; $i < $numRecs ; $i++){
-					$rslt[] = $stmt->fetch_array($resulttype= MYSQLI_ASSOC);
-					if ($rslt[$i] == null){
-						unset($rslt[$i]);
-						break;
-					}                       
-				}
-				
-				$stmt->close();
-				echo $_REQUEST['callback'],"(" ,json_encode($rslt), ");";
-            }
+        /*case "addInventoryLoad":
+            
         
         
-            break;
+        
+            break;*/
         case "simErr":
             echo "loadError();";
             break;
