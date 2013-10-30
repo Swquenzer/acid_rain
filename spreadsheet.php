@@ -34,8 +34,8 @@ if( !isset( $_SESSION["loggedIn"] ) )
 			<h1><img src="gfx/head_icon.gif" width="150px" height="150px">Chemical Database</h1>
 			<nav id="navMenu">
 				<ul>
-					<li><a href="index.html">Home</a></li>|
-					<li><a href="info.html">Info</a></li>|
+					<li><a href="index.php">Home</a></li>|
+					<li><a href="info.php">Info</a></li>|
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>

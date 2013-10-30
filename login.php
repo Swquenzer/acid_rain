@@ -40,9 +40,10 @@ if( isset( $_POST["submit"] ) )
 			<h1><img src="gfx/head_icon.gif" width="150px" height="150px">Chemical Database</h1>
 			<nav id="navMenu">
 				<ul>
-					<li><a href="index.html">Home</a></li>|
-					<li><a href="info.html">Info</a></li>|
-					<li><a href="spreadsheet.php">Spreadsheet</a></li>
+					<li><a href="index.php">Home</a></li>|
+					<li><a href="info.php">Info</a></li>
+					<?php if( isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) { ?>|
+					<li><a id="loginLink" href="spreadsheet.php">Spreadsheet</a></li><?php } ?>
 				</ul>
 			</nav>
 		</span>
