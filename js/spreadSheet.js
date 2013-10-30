@@ -1,4 +1,4 @@
-﻿//spreadSheet.js
+//spreadSheet.js
 
 ///<reference path="main.js"/>
 
