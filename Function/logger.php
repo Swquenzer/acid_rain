@@ -16,7 +16,7 @@
 ******************************************************/
 function slog($entry)
 {
-<<<<<<< HEAD
+<<< HEAD
 	$head = date('m//d//y H:i:s') . ':   ';
 =======
 date_default_timezone_set('America/New_York');
@@ -30,7 +30,7 @@ $current = file_get_contents($file);
 $current .= $head. $entry. "\n";
 // Write the contents back to the file
 file_put_contents($file, $current);
-
+HEAD;
 }
 	 
  ?>
