@@ -1,6 +1,6 @@
 <?php
 // this script is intended to allow automated update of the stored queries
-/*
+
 $names = array('Get_Spreadsheet','Add_Inventory_Preload'); 
 $queries[0] = <<<'EOD'
 CREATE PROCEDURE `Get_Spreadsheet`() 
@@ -22,5 +22,5 @@ for ($i =0;$i<count($queries);$i++){
     $devDB->query("DROP procedure IF EXISTS `$names[$i]`;");
     if(!$devDB->query($queries[$i]))
         slog($devDB->error);
-}*/
+}
 ?>
