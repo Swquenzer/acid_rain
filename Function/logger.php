@@ -16,7 +16,7 @@
 ******************************************************/
 function slog($entry)
 {
-	$head = $_SERVER['REQUEST_TIME']. ':   ';
+	$head = date('m//d//y H:i:s') . ':   ';
 $file = 'log.log';	
 // Open the file to get existing content
 $current = file_get_contents($file);
