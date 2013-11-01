@@ -11,7 +11,6 @@ if( !isset( $_SESSION["loggedIn"] ) )
 {
     header( "Location: login.php" );
 }
-
 ?>
 <!doctype html>
 <html lang="en">
