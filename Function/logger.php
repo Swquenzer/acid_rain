@@ -16,7 +16,13 @@
 ******************************************************/
 function slog($entry)
 {
+<<<<<<< HEAD
 	$head = date('m//d//y H:i:s') . ':   ';
+=======
+date_default_timezone_set('America/New_York');
+//$head = $_SERVER['REQUEST_TIME']. ':   ';
+$head = "[".date("g:i a")."]:";
+>>>>>>> 371889545100084ecb6139b480c1a70ff8e60626
 $file = 'log.log';	
 // Open the file to get existing content
 $current = file_get_contents($file);
