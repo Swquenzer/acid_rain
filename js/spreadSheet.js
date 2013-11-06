@@ -33,6 +33,8 @@ function returnTable(recSet) {
         tbody.appendChild(tr);
     }
 
+	// Provides client-side table sorting. Must come after table loading
+	$("#chemical_spreadsheet").tablesorter( {sortList: [[2,0]]} );
 }
 
 function loadError() {

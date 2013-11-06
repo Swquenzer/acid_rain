@@ -23,6 +23,14 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/main.js"></script>
     <script src="js/spreadSheet.js"></script>
+	<script src="js/jquery.tablesorter.js"></script>
+	<script>
+		/*$(document).ready(function() 
+		{ 
+			$("#chemical_spreadsheet").tablesorter( {sortList: [2,0]} ); 
+		}
+	); */
+	</script>
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -51,7 +59,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					</span></p>
 				</fieldset>
 			</form>
-			<table id="chemical_spreadsheet">
+			<table id="chemical_spreadsheet" class="tablesorter">
 				<thead>
 					<tr>
 						<th scope="col" id="th_left">Room</th>

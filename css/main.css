@@ -135,6 +135,29 @@ header #navMenu a:hover {
 	-webkit-border-radius: 0px 10px 0px 0px;
 	border-radius: 0px 10px 0px 0px;
 }
+#chemical_spreadsheet th.headerSortUp { 
+	background: #6ECC6E;
+	background-image: url(../gfx/sortUp.png);    
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#chemical_spreadsheet th.headerSortDown { 
+	background: #6ECC6E;
+	background-image: url(../gfx/sortDown.png);    
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#chemical_spreadsheet th.header { 
+	background: #7EDC7E;
+    background-image: url(../gfx/sortInactive.png);    
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
 #chemical_spreadsheet td {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 12px;
