@@ -24,13 +24,6 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	<script src="js/main.js"></script>
     <script src="js/spreadSheet.js"></script>
 	<script src="js/jquery.tablesorter.js"></script>
-	<script>
-		/*$(document).ready(function() 
-		{ 
-			$("#chemical_spreadsheet").tablesorter( {sortList: [2,0]} ); 
-		}
-	); */
-	</script>
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->

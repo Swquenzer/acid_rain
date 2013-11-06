@@ -135,28 +135,15 @@ header #navMenu a:hover {
 	-webkit-border-radius: 0px 10px 0px 0px;
 	border-radius: 0px 10px 0px 0px;
 }
-#chemical_spreadsheet th.headerSortUp { 
-	background: #6ECC6E;
-	background-image: url(../gfx/sortUp.png);    
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center right;
-}
-
-#chemical_spreadsheet th.headerSortDown { 
-	background: #6ECC6E;
-	background-image: url(../gfx/sortDown.png);    
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center right;
-}
-
 #chemical_spreadsheet th.header { 
-	background: #7EDC7E;
-    background-image: url(../gfx/sortInactive.png);    
+	background: #7EDC7E url(../gfx/sortInactive.png) no-repeat 90% 75%;    
     cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center right;
+}
+#chemical_spreadsheet th.headerSortUp { 
+	background: #61C261 url(../gfx/sortUp.png) no-repeat 90% 95%;
+}
+#chemical_spreadsheet th.headerSortDown { 
+	background: #61C261 url(../gfx/sortDown.png) no-repeat 90% 55%;
 }
 #chemical_spreadsheet td {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
