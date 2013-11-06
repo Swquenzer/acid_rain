@@ -140,10 +140,10 @@ header #navMenu a:hover {
     cursor: pointer;
 }
 #chemical_spreadsheet th.headerSortUp { 
-	background: #61C261 url(../gfx/sortUp.png) no-repeat 90% 95%;
+	background: #61C261 url(../gfx/sortUp.png) no-repeat 90% 85%;
 }
 #chemical_spreadsheet th.headerSortDown { 
-	background: #61C261 url(../gfx/sortDown.png) no-repeat 90% 55%;
+	background: #61C261 url(../gfx/sortDown.png) no-repeat 90% 65%;
 }
 #chemical_spreadsheet td {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
