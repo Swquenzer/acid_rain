@@ -57,8 +57,16 @@ if( isset($_REQUEST['callback'])){
 				echo $_REQUEST['callback'],"(" ,json_encode($rslt), ");";
             }else
                 slog($db->error);
-        
             break;
+            
+        case "checkValues":
+            
+        break;
+        case "addNewInventory":
+        
+        
+        
+            break;    
         case "simErr":
             echo "loadError();";
             break;
