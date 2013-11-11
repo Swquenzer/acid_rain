@@ -4,6 +4,7 @@
 
 window.onload = function () {
     getData("function/tbl.php", "addInventoryLoad", "", false);
+    suggMfrs();
 }
 
 function addInventoryLoad(recSet) {
@@ -30,4 +31,21 @@ function addInventoryLoad(recSet) {
         rooms.appendChild(option);
     }
 
+}
+function suggMfrs() {
+    $(function() {
+        $( "#dialog-confirm" ).dialog({
+            resizable: false,
+            height:140,
+            modal: true,
+            buttons: {
+                "Manufacterer Suggestion 1": function() {
+                        $( this ).dialog( "close" ); //Run search query using inputed manufacturer
+                    },
+                "Try again": function() {
+                    $( this ).dialog( "close" ); //Run search query using suggested manufacturer
+                }
+            }
+        });
+    });
 }
