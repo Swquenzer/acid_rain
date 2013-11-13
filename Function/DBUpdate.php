@@ -29,7 +29,7 @@ VALUES(ChemicalID, Room, Location, ItemCount, Size, Unit, now());
 END
 EOD;
 
-$names[3] = 'Find_Manufacturer';
+/*$names[3] = 'Find_Manufacturer';
 $queries[3] = <<<'EOD'
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Find_Manufacturer`(ManufacturerName varchar(60))
 BEGIN
@@ -98,7 +98,7 @@ BEGIN
     RETURN ROUND((1 - LEVENSHTEIN(s1, s2) / max_len) * 100);
   END
 EOD;
-
+*/
 
 //$devDB->query('DELIMITER $$');
 for ($i =0;$i<count($queries);$i++){
@@ -107,11 +107,11 @@ for ($i =0;$i<count($queries);$i++){
     if(!$devDB->query($queries[$i]))
         slog($devDB->error);
 }
-for ($i =0;$i<count($functions);$i++){
+/*for ($i =0;$i<count($functions);$i++){
     if(!$devDB->query("DROP function IF EXISTS `$functionNames[$i]`;"))
         slog($devDB->error);
     if(!$devDB->query($functions[$i]))
         slog($devDB->error);
-}
+}*/
 //$devDB->query('DELIMITER ;');
 ?>
