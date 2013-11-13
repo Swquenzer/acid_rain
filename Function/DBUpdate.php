@@ -29,18 +29,15 @@ VALUES(ChemicalID, Room, Location, ItemCount, Size, Unit, now());
 END
 EOD;
 
-/*$names[3] = 'Find_Manufacturer';
+$names[3] = 'Get_Manufacturer';
 $queries[3] = <<<'EOD'
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Find_Manufacturer`(ManufacturerName varchar(60))
 BEGIN
-SELECT * FROM 
-(SELECT `manufacturer`.`ID` AS ManufacturerID, levenshtein_ratio(Lower(`manufacturer`.`Name`), ManufacturerName) AS levenshtein
-FROM `manufacturer`) AS sub1
-WHERE levenshtein > 60
-ORDER BY levenshtein DESC;
+SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS ManufacturerName
+FROM `manufacturer`;
 END
 EOD;
-
+/*
 $functionNames[0] = 'levenshtein';
 $functions[0] = <<<'EOD'
 CREATE DEFINER=`root`@`localhost` FUNCTION `levenshtein`( s1 VARCHAR(255), s2 VARCHAR(255) ) RETURNS int(11)
