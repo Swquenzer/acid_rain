@@ -16,7 +16,7 @@ if( isset( $_POST["submit"] ) )
 
     else
     {
-        $errorMessage = "Invalid username or password.";
+        $errorMessage = "Invalid password.";
     }
 }
 
