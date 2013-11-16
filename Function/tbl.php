@@ -60,6 +60,7 @@ if( isset($_REQUEST['callback'])){
             break;
             
         case "checkValues":
+            //if( isSet($_REQUEST['manufacturer
             
         break;
         case "addNewInventory":

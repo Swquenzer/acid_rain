@@ -44,6 +44,7 @@
 				<p>
 				    <label id="manufacturerLbl">Manufacturer</label>
 				    <input list="manufacturers" name="manufacturer" />
+                    <input type="hidden" id="manufacturerID" />
 				</p><p>
 				    <label id="chemicalsLbl">Chemical</label>
 				    <input list="chemicals" name="chemical" />
@@ -55,10 +56,10 @@
 				    <input list="location" name="room" />
 				</p><p>
 				    <label id="quantLbl">Quantity</label>
-				    <input list="quantity" name="room" />
+				    <input type="text" id="quantity" />
 				</p><p>
                     <label id="unitSizeLbl">Unit Size</label>
-				    <input type="number" name="room" />
+				    <input type="number" id="room" />
                 </p><p>
                     <label id="unitLbl">Unit of Measure</label>
                     <input type="text" id="unit">
@@ -71,8 +72,6 @@
 				<datalist id="chemicals">
 				</datalist>
 				<datalist id="rooms">
-				</datalist>
-				<datalist id="quantity">
 				</datalist>
 				<datalist id="location">
 				</datalist>
