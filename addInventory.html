@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -40,11 +41,10 @@
 	</header>
 	<div id="wrapper">
 		<section id="main">
-			<form class="inputField" id="addInv" action="Function/tbl.php" method="post"><fieldset>
+			<form class="inputField" id="addInv" action="Function/tbl.php?callback=addNewInventory"><fieldset>
 				<p>
 				    <label id="manufacturerLbl">Manufacturer</label>
-				    <input list="manufacturers" name="manufacturer" />
-                    <input type="hidden" id="manufacturerID" />
+				    <input list="manufacturers" name="manufacturer" required/>
 				</p><p>
 				    <label id="chemicalsLbl">Chemical</label>
 				    <input list="chemicals" name="chemical" />
@@ -53,7 +53,7 @@
 				    <input list="rooms" name="room" />
 				</p><p>
 				    <label id="locationLbl">Location</label>
-				    <input list="location" name="room" />
+				    <input list="locations" name="location" />
 				</p><p>
 				    <label id="quantLbl">Quantity</label>
 				    <input type="text" id="quantity" />
@@ -64,7 +64,7 @@
                     <label id="unitLbl">Unit of Measure</label>
                     <input type="text" id="unit">
 				</p><p>
-				<input type="submit" name="submit">
+				<input type="button" onclick="validate" name="submit">
 				</p>
 				<!--these will be filled by javascript when the page loads-->
 				<datalist id="manufacturers">
@@ -73,7 +73,7 @@
 				</datalist>
 				<datalist id="rooms">
 				</datalist>
-				<datalist id="location">
+				<datalist id="locations">
 				</datalist>
 			</fieldset></form>
 		</section>
