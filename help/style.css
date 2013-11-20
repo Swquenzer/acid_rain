@@ -1,0 +1,191 @@
+body {
+  color: black;
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 75%;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: #1B291B;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 150%;
+  border-bottom: 1px solid #AAAAAA;
+  position: fixed;
+  width: 100%;
+  height: 3.5em;
+}
+
+#header a {
+  color: white;
+  font-family: Verdana, Helvetica, Arial, Sans-serif;
+  font-size: 50%;
+  font-weight: normal;
+  text-decoration: underline;
+  float: right;
+}
+
+.headerTitle {
+  margin: 0;
+  padding: 0.25em 4mm 0.25em 4mm;
+}
+
+.headerTitle span {
+  color: white;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+.leftSideBar {
+  color: #A68C53;
+  float: left;
+  clear: left;
+  position: fixed;
+  margin-top: 5.3em;
+  padding: 0;
+  width: 25em;
+}
+
+.leftSideBar .sideBarTitle {
+  color: #404040;
+  background-color: #E6DFCF;
+  font-weight: bold;
+  margin: 1em 0 1em 0;
+  padding: 1.2ex;
+  text-align: center;
+}
+
+.leftSideBar ul {
+  list-style-type: none;
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+
+.leftSideBar li {
+  margin: .4em 0 0 -1em;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.leftSideBar li ul li {
+  font-size: 1em;
+  font-weight: normal;
+  color: #9D7C50;
+}
+
+.leftSideBar li ul li ul li{
+  font-size: .8em;
+  font-weight: normal;
+  color: #7D6C4B;
+}
+
+.leftSideBar a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.leftSideBar a:hover {
+  color: #404040;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#main {
+  color: black;
+  background-color: white;
+  text-align: justify;
+  line-height: 1.5em;
+  margin: 0 0 0 25em;
+  padding: 5.3em 1em 1em 1em;
+  border-left: 1px solid #D8D2C3;
+  max-width: 75em;
+}
+
+#main .anchor {
+  display: block;
+  position: relative;
+  top: -5.3em;
+}
+
+#main h1 {
+  color: #404040;
+  background-color: #D8D2C3;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 175%;
+  font-weight: bold;
+  text-align: center;
+  margin: .75em 0 0 0;
+  padding: .75em 0 .75em 0;
+}
+
+#main h2{
+  color: #A68C53;
+  background-color: transparent;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 175%;
+  font-weight: bold;
+  text-align: left;
+  margin: .75em 0 0 0;
+  padding: .75em 0 0 0;
+  border-top: 1px solid #D8D2C3;
+}
+
+#main h3{
+  color: #807060;
+  background-color: transparent;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 150%;
+  font-weight: normal;
+  text-align: left;
+  margin: .75em 0 0 0;
+  padding: .75em 0 0 0;
+}
+
+#main a {
+  color: #A68C53;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#main a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 1em 0 1.5em 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 0.5ex 0;
+}
+
+dd {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0;
+}
+
+#footer {
+  color: white;
+  background-color: #1B291B;
+  font-size: 92%;
+  text-align: center;
+  line-height: 1.25em;
+  margin: 0;
+  padding: 1em 4mm 1em 4mm;
+}
+
+#footer a {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#footer a:hover {
+  text-decoration: none;
+}
