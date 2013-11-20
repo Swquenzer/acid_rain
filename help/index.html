@@ -20,13 +20,31 @@
           <li><a href="#1.0" title="Introduction">1.0 - Introduction</a>
 		  </li>
           <li><a href="#2.0" title="Summary">2.0 - Summary</a>
+		  	<ul>
+			  <li><a href="#2.1" title="Environment">2.1 - Environment</a>
+			    <ul>
+				  <li><a href="#2.1.1" title="Developers">2.1.1 - Developers</a></li>
+				  <li><a href="#2.1.2" title="Modifiers">2.1.2 - Modifiers</a></li>
+				  <li><a href="#2.1.3" title="Viewers">2.1.3 - Viewers</a></li>
+				  <li><a href="#2.1.4" title="Constraints">2.1.4 - Constraints</a></li>
+				</ul>
+			  </li>
+			  <li><a href="#2.2" title="Framework">2.2 - Framework</a>
+			    <ul>
+				  <li><a href="#2.2.1" title="Developers">2.2.1 - Languages</a></li>
+				  <li><a href="#2.2.2" title="Modifiers">2.2.2 - Ideology</a></li>
+				  <li><a href="#2.2.3" title="Viewers">2.2.3 - Implementations</a></li>
+				  <li><a href="#2.2.4" title="Constraints">2.2.4 - Robustness</a></li>
+				</ul>
+			  </li>
+			</ul>
 		  </li>
           <li><a href="#3.0" title="Getting Started">3.0 - Getting Started</a>
 		    <ul>
 			  <li><a href="#3.1" title="System Requirements">3.1 - System Requirements</a>
 			    <ul>
 				  <li><a href="#3.1.1" title="Mac">3.1.1 - Mac</a></li>
-				  <li><a href="#3.1.2" title="Windows">3.1.1 - Windows</a></li>
+				  <li><a href="#3.1.2" title="Windows">3.1.2 - Windows</a></li>
 				</ul>
 			  </li>
 			</ul>
@@ -47,35 +65,57 @@
 	  <a class="anchor" name="1.0"></a>
 	  <h1 id="Introduction" style="margin-top: 0;">1.0 - Introduction</h1>
 	  
-		<p>This is version two of Gila, a revision of the
-		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
-          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
-          in February 2003. Following is a summary of the major differences between this version and the
-          original.</p>
-
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+		<p>AcidRain is a project that intends to improve the efficiency and convenience of the Chemical Safety Sheet process by placing all Chemical Safety Sheets (CSS) along with their connections to the corresponding Material Safety Data Sheets (MSDS) on a dynamic database whose interface is accessible to all authorized personnel, allowing for a more effective way of storing data. This database and its interface will also give authorized users that ability to control and modify the database as the needs arises. The database interface is designed for use by our local EMU Science Department as well as the Harrisonburg Fire Department in case of emergency.</p>
          
       <a class="anchor" name="2.0"></a>
       <h1 id="Summary">2.0 - Summary</h1>
 	  
-		<p>This is version two of Gila, a revision of the
-		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
-          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
-          in February 2003. Following is a summary of the major differences between this version and the
-          original.</p>
+	  <p>In short, AcidRain provides a convenient way for schools, business, and organizations to store and dynamically view and modify chemical in an orderly fashion.</p>
+	  
+		<a class="anchor" name="2.1"></a>
+	    <h2 id="Environment">2.1 - Environment</h2>
+		
+		  <p>The following Users, or Actors, will be present in the AcidRain environment:</p>
 
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+          <a class="anchor" name="2.1.1"></a>
+	      <h3 id="Developers">2.1.1 - Developers</h2>
+		  <p>These are the AcidRain team, namely Isaac Tice, Stephan Quenzer, and Josiah Driver. Their role is to plan, create, analyze, implement, install, modify, verify, document, deploy, and maintain the software in its environment. They also interact with selected, intended users to discover and clarify user requirements and specifications.</p>
+    
+	      <a class="anchor" name="2.1.2"></a>
+	      <h3 id="Modifiers">2.1.2 - Modifiers</h2>
+		  <p>These are EMU students or faculty who are given access to the database interface with the ability to not only view data but insert new data as well as correct, edit, and delete existing data.</p>
+		  
+	      <a class="anchor" name="2.1.3"></a>
+	      <h3 id="Viewers">2.1.3 - Viewers</h2>
+		  <p>These are those who for any reason wish to view the data, for example, the Harrisonburg Fire Chief, but are not given authority to modify it.</p>
 
+          <a class="anchor" name="2.1.4"></a>
+	      <h3 id="Cosntraints">2.1.4 - Constraints</h2>
+		  <p>Acid Rain has the following constraints: It must be user-friendly, it must be efficient and functional, and it must be secure. It will assume the EMU Science department will take care to only authorize the correct personnel and take care of the software piece responsibly. It will depend on the EMU server system and, as it will use primarily PHP, JavaScript, HTML5, MySQL, and such, it will also depend on an Apache Server to be functional. Acid Rain will place its binary and other code files on Github and use the Github revision control system to organize and store our source code.</p>
+          <p>A link to our repository can be found <a href="https://github.com/Swquenzer/acid_rain" target="new">here</a>:</p>
+
+		<a class="anchor" name="2.2"></a>
+	    <h2 id="Framework">2.2 - Framework</h2>
+		
+		  <p>The AcidRain Framework in the following areas will be as such:</p>
+
+          <a class="anchor" name="2.2.1"></a>
+	      <h3 id="Languages">2.2.1 - Languages</h2>
+		  <p>Acid Rain has been developed using PHP, JavaScript, MySQL and HTML5. Temporary Code: pieces of code that are only intended to be used on a temporary basis have a comment starting with ** immediately before it; multi-line pieces of code are immediately followed with a comment starting with !*.</p>
+    
+	      <a class="anchor" name="2.2.2"></a>
+	      <h3 id="Ideology">2.2.2 - Ideology</h2>
+		  <p>This application is designed as a largely client processed application.</p>
+		  
+	      <a class="anchor" name="2.2.3"></a>
+	      <h3 id="Implementations">2.2.3 - Implementations</h2>
+		  <p>This application uses stored queries to perform all of it's database accesses.</p>
+
+          <a class="anchor" name="2.2.4"></a>
+	      <h3 id="Robustness">2.2.4 - Robustness</h2>
+		  <p>This application's components are developed to a designated level of robustness, i.e. mission critical. This designation recognizes that some features simply may not be worth the effort of 100% success while we can not afford for others to fail.</p>
+          <p>A link to our repository can be found <a href="https://github.com/Swquenzer/acid_rain" target="new">here</a>:</p>
+		  
       <a class="anchor" name="3.0"></a>
 	  <h1 id="Getting Started">3.0 - Getting Started</h1>
 	  
