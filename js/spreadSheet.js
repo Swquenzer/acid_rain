@@ -5,6 +5,7 @@
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
     getData("function/tbl.php", "returnTable", "page=1", true);
+	rowCheck();
 };
 
 function returnTable(recSet) {
@@ -77,9 +78,11 @@ function createForm(main) {
 	$('#main').prepend("<h1>Delete records</h1>");
 	$('#deleteForm').append("<input type='button' id='submitDelete' value='Delete Records' onClick='processDelete()'>");
 }
+
 function deleteForm(formClass) {
 	$("."+formClass).remove();
 }
+
 function processDelete() {
     alert('In');
     var toDelete = [];
@@ -92,4 +95,13 @@ function processDelete() {
     for(var i=0;i<toDelete.length;i++) {
         alert(toDelete[i]);
     }
+}
+
+//Selects checkbox by clicking anywhere in tr
+function rowCheck() {
+	$('#chemical_spreadsheet tr').click(function(event) {
+		if(event.target.type !== 'checkbox') {
+			$(':checkbox',this).trigger('click');
+		}
+	});
 }
