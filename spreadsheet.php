@@ -175,8 +175,8 @@ if( !isset( $_SESSION["loggedIn"] ) )
 				echo "<script>
 						deleteForm('inputField');
 						createForm('main');
-					  </script>";
-			}
+					 </script>";
+			} else {
 			?>
 			<!-- display=none if delete is set -->
 			<form class="inputField" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
@@ -187,6 +187,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					</span></p>
 				</fieldset>
 			</form>
+			<?php } ?>
 		</section>
 	</div><!--End Wrapper-->
 	<footer>
