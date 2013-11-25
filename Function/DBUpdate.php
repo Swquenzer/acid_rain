@@ -37,6 +37,55 @@ SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS Manufactu
 FROM `manufacturer`;
 END
 EOD;
+
+$names[4]='Add_New_Inventory';
+$queries[4] = <<<'EOD'
+CREATE DEFINER=`devAdmin`@`%` PROCEDURE `Add_New_Inventory`(ChemicalID int(10),Room varchar(45), Location varchar(45), ItemCount smallint(255), Size smallint(255), Unit varchar(45))
+BEGIN
+INSERT INTO `acid_rain`.`inventory`
+(`ChemicalID`,`Room`,`Location`, `ItemCount`, `Size`, `Units`, `LastUpdated`)
+VALUES(ChemicalID, Room, Location, ItemCount, Size, Unit, now());
+END
+EOD;
+
+$names[5] = 'addChemical';
+$queries[5] =<<<'EOD'
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addChemical`(chemicalName varchar(60))
+BEGIN
+Insert INTO `chemical`(`Name`)
+VALUES(chemicalName);
+SET @Id = (SELECT LAST_INSERT_ID());
+END
+EOD;
+
+$names[6] = 'addManufacturer';
+$queries[6] = <<<'EOD'
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addManufacturer`(manufacturerName varchar(60))
+BEGIN
+Insert INTO `manufacturer`(`Name`)
+VALUES(manufacturerName);
+SET @Id = (SELECT LAST_INSERT_ID());
+END
+EOD;
+
+$names[7]='Get_Chemical';
+$queries[7] =<<<'EOD'
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Chemical`(manufacturerID Int(11))
+BEGIN
+SELECT `Chemical`.`ID` AS ChemicalID, `Chemical`.`Name` AS ChemicalName
+FROM `Chemical`
+WHERE `chemical`.`MfrID` = manufacturerID;
+END
+EOD;
+
+$names = 'Get_Manufacturer';
+$queries[8] =<<<'EOD'
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Manufacturer`()
+BEGIN
+SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS ManufacturerName
+FROM `manufacturer`;
+END
+EOD;
 /*
 $functionNames[0] = 'levenshtein';
 $functions[0] = <<<'EOD'
