@@ -35,7 +35,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 			<nav id="navMenu">
 				<ul>
 					<li><a href="index.php">Home</a></li>|
-					<li><a href="info.php">Info</a></li>|
+					<li><a href="./help">Documentation</a></li>|
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>

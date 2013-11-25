@@ -21,7 +21,7 @@
 			<nav id="navMenu">
 				<ul>
 					<li><a class="activePage" id="homeLink" href="index.php">Home</a></li>|
-					<li><a id="infoLink" href="info.php">Info</a></li>|
+					<li><a id="infoLink" href="./help">Documentation</a></li>|
 					<?php if( isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) { ?>
 					<li><a id="loginLink" href="spreadsheet.php">Spreadsheet</a></li><?php } else { ?>
 					<li><a id="loginLink" href="login.php">Login</a></li><?php } ?>

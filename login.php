@@ -41,7 +41,7 @@ if( isset( $_POST["submit"] ) )
 			<nav id="navMenu">
 				<ul>
 					<li><a href="index.php">Home</a></li>|
-					<li><a href="info.php">Info</a></li>
+					<li><a href="./help">Documentation</a></li>
 					<?php if( isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) { ?>|
 					<li><a id="loginLink" href="spreadsheet.php">Spreadsheet</a></li><?php } ?>
 				</ul>
