@@ -56,16 +56,16 @@ function addCheckboxes() {
 ///<summary>In the event that the database query does not execute correctly replaces the table with error text</summary>
 //Adds checkboxes to all rows in spreadsheet
 //Checkboxes are set with values cb0 through cb(#rows)
-	var i=0;
-	$("table td:first-child").each(function() {
-		//Cycle through each row in the table
-		var cb = document.createElement("input");
-		cb.setAttribute("type", "checkbox");
-		cb.setAttribute("value", "cb"+i); 
-		cb.setAttribute("name", "delete");
-		$(this).prepend(cb);
-		i++;
-	});
+    var i=0;
+    $("table td:first-child").each(function() {
+            //Cycle through each row in the table
+            var cb = document.createElement("input");
+            cb.setAttribute("type", "checkbox");
+            cb.setAttribute("value", "cb"+i);
+            cb.setAttribute("name", "delete");
+            $(this).prepend(cb);
+            i++;
+    });
 }
 function createForm(main) {
 	addCheckboxes();
@@ -73,10 +73,23 @@ function createForm(main) {
 	//form.setAttribute("action", ""); //update action
 	//form.setAttribute("method", "post");
 	var section = document.getElementById(main);
-	$('#main').wrapInner("<form id='deleteForm' action='' method='post'></form>");
+	$('#main').wrapInner("<form id='deleteForm'></form>");
 	$('#main').prepend("<h1>Delete records</h1>");
-	$('#deleteForm').append("<input type='submit' name='submitDelete' value='Delete Records' class='inputField'>");
+	$('#deleteForm').append("<input type='button' id='submitDelete' value='Delete Records' onClick='processDelete()'>");
 }
 function deleteForm(formClass) {
 	$("."+formClass).remove();
+}
+function processDelete() {
+    alert('In');
+    var toDelete = [];
+    $('input[type=checkbox]').each(function () {
+        var cb = (this.checked ? "1" : "0");
+        if(cb==1) {
+            toDelete = cb.value;
+        }
+    });
+    for(var i=0;i<toDelete.length;i++) {
+        alert(toDelete[i]);
+    }
 }
