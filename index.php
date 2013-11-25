@@ -40,14 +40,15 @@
                    you to view, add, delete, or modify records.
 				<h2>Who is it for?</h2>
 				<p>In order to preserve the integrity of the data and keep it secure, AcidRain can only be used by EMU faculty and students that have been given the correct authorization
-				   and credentials. If you have these, then go ahead and head over to the <a href="login.php">login page</a> and log in to view what we call the "spreadsheet" (the table
+				   and credentials. If you have these, then go ahead and head over to the <a href="login.php" style="color:black">login page</a> and log in to view what we call the "spreadsheet" (the table
 				   of records) if you haven't already.</p>
 				<h2>Fire Department</h2>
 				<p>In case of emergency, fire-code regulation requires that necessary chemical information be provided to members of the Harrisonburg Fire Department to equip them with
 				   knowledge about the presence, location, and amount of any and all chemicals in the building to ensure their safety and effectiveness before they enter the building.
 				   AcidRain is designed to help with this in case the need arises.</p>
 				<h2>AcidRain Team</h2>
-				<p>AcidRain is a project created by EMU students Stephen Quenzer, Isaac Tice, and Josiah Driver, for their semester project in Software Engineering with Charles Cooley.</p>
+				<p>AcidRain is a project created in the Fall of 2013 by EMU students Stephen Quenzer, Isaac Tice, and Josiah Driver, for their semester project in Software Engineering
+				   with Charles Cooley. For additional help and information, visit the <a href="./help">documentation page</a>.</p>
 			</span>
 			<hr>
 		</section>

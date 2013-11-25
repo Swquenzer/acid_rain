@@ -217,6 +217,12 @@ p {
 	width: 80%;
 	margin: auto;
 }
+#content a {
+	color: black;
+}
+#content a:hover {
+	text-decoration: none;
+}
 .activePage {
 	color: black !important;
 }
