@@ -171,6 +171,22 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					</tr>
 				</tbody>
 			</table>
+			<?php if(isset($_POST['delete'])) {
+				echo "<script>
+						deleteForm('inputField');
+						createForm('main');
+					  </script>";
+			}
+			?>
+			<!-- display=none if delete is set -->
+			<form class="inputField" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+				<fieldset>
+					<p><span class="inputFieldCenter">
+						<label for="submit">Delete chemical records: </label>
+						<input type="submit" name="delete" value="Delete records"/>
+					</span></p>
+				</fieldset>
+			</form>
 		</section>
 	</div><!--End Wrapper-->
 	<footer>

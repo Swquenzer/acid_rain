@@ -52,3 +52,31 @@ function loadError() {
     parent.removeChild(table);
     parent.appendChild(errMsg);
 }
+function addCheckboxes() {
+///<summary>In the event that the database query does not execute correctly replaces the table with error text</summary>
+//Adds checkboxes to all rows in spreadsheet
+//Checkboxes are set with values cb0 through cb(#rows)
+	var i=0;
+	$("table td:first-child").each(function() {
+		//Cycle through each row in the table
+		var cb = document.createElement("input");
+		cb.setAttribute("type", "checkbox");
+		cb.setAttribute("value", "cb"+i); 
+		cb.setAttribute("name", "delete");
+		$(this).prepend(cb);
+		i++;
+	});
+}
+function createForm(main) {
+	addCheckboxes();
+	//var form = document.createElement("form");
+	//form.setAttribute("action", ""); //update action
+	//form.setAttribute("method", "post");
+	var section = document.getElementById(main);
+	$('#main').wrapInner("<form id='deleteForm' action='' method='post'></form>");
+	$('#main').prepend("<h1>Delete records</h1>");
+	$('#deleteForm').append("<input type='submit' name='submitDelete' value='Delete Records' class='inputField'>");
+}
+function deleteForm(formClass) {
+	$("."+formClass).remove();
+}
