@@ -35,13 +35,19 @@
 			<hr>
 			<span id="content">
 				<h2>General Info</h2>
-				<p>Information to any general users who have accessed this page. Who is it for? What types of information and tools are available?
-				<h2>Faculty Usage</h2>
-				<p>EMU faculty can use this application for the purpose of....</p>
+				<p>Welcome. AcidRain is a database application project that allows the EMU Science Department the ability to keep track of their chemicals in an orderly, systematic way. 
+				   Rather than working with hard copies of thousands of records, AcidRain gives you easy, efficient processing of chemical records. It is designed in a simple way to allow
+                   you to view, add, delete, or modify records.
+				<h2>Who is it for?</h2>
+				<p>In order to preserve the integrity of the data and keep it secure, AcidRain can only be used by EMU faculty and students that have been given the correct authorization
+				   and credentials. If you have these, then go ahead and head over to the <a href="login.php">login page</a> and log in to view what we call the "spreadsheet" (the table
+				   of records) if you haven't already.</p>
 				<h2>Fire Department</h2>
-				<p>In case of emergency, fire-code regulation requires that necessary chemical information be provided...</p>
-				<h2>Etc</h2>
-				<p>More content.....</p>
+				<p>In case of emergency, fire-code regulation requires that necessary chemical information be provided to members of the Harrisonburg Fire Department to equip them with
+				   knowledge about the presence, location, and amount of any and all chemicals in the building to ensure their safety and effectiveness before they enter the building.
+				   AcidRain is designed to help with this in case the need arises.</p>
+				<h2>AcidRain Team</h2>
+				<p>AcidRain is a project created by EMU students Stephen Quenzer, Isaac Tice, and Josiah Driver, for their semester project in Software Engineering with Charles Cooley.</p>
 			</span>
 			<hr>
 		</section>
