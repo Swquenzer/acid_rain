@@ -27,6 +27,13 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<style>
+		#deleteForm input[type='button'] {
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+		}
+	</style>
 </head>
 <body>
 	<header>
