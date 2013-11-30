@@ -1,10 +1,10 @@
 ﻿//spreadSheet.js
-
 ///<reference path="main.js"/>
 
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
     getData("function/tbl.php", "returnTable", "page=1", true);
+	rowCheck();
 };
 
 function returnTable(recSet) {
@@ -73,23 +73,55 @@ function createForm(main) {
 	//form.setAttribute("action", ""); //update action
 	//form.setAttribute("method", "post");
 	var section = document.getElementById(main);
-	$('#main').wrapInner("<form id='deleteForm'></form>");
+	$('#main').wrapInner("<form id='deleteForm' class='inputField'></form>");
 	$('#main').prepend("<h1>Delete records</h1>");
 	$('#deleteForm').append("<input type='button' id='submitDelete' value='Delete Records' onClick='processDelete()'>");
 }
+
 function deleteForm(formClass) {
 	$("."+formClass).remove();
 }
+
+var ajax_caller = function(record) {
+	$.ajax({
+		type: 'POST',
+		url: 'Function/deleteRecord.php',
+		data: {'location': record[0], 'name': record[1], 'amount': record[2]},
+		success: function() {
+			//alert("Success");
+		},
+		error: function() {
+			alert('error processing ajax request: check spreadsheet.js');
+		},
+	});
+}
+
 function processDelete() {
-    alert('In');
-    var toDelete = [];
+	var ajax_calls = [];
     $('input[type=checkbox]').each(function () {
-        var cb = (this.checked ? "1" : "0");
-        if(cb==1) {
-            toDelete = cb.value;
+		var cb = this;
+        var cbBool = (this.checked ? "1" : "0");
+        if(cbBool==1) {
+			row = cb.parentNode.parentNode;
+			//Get individual record data
+			record = [];
+			for(var i=1; i < row.children.length; i++) {
+				record.push(row.children[i].innerHTML);
+			}
+			//ajax call
+			//Create array of deferred objects
+			ajax_calls.push(ajax_caller(record));
+			$.when.apply(this, ajax_calls).done(function() {
+				$(row).fadeOut(300, function() { $(this).remove(); });
+			});
         }
     });
-    for(var i=0;i<toDelete.length;i++) {
-        alert(toDelete[i]);
-    }
+}
+//Selects checkbox by clicking anywhere in tr
+function rowCheck() {
+	$('#chemical_spreadsheet tr').click(function(event) {
+		if(event.target.type !== 'checkbox') {
+			$(':checkbox',this).trigger('click');
+		}
+	});
 }
