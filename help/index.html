@@ -29,23 +29,21 @@
 				  <li><a href="#2.1.4" title="Constraints">2.1.4 - Constraints</a></li>
 				</ul>
 			  </li>
-			  <li><a href="#2.2" title="Framework">2.2 - Framework</a>
-			    <ul>
-				  <li><a href="#2.2.1" title="Developers">2.2.1 - Languages</a></li>
-				  <li><a href="#2.2.2" title="Modifiers">2.2.2 - Ideology</a></li>
-				  <li><a href="#2.2.3" title="Viewers">2.2.3 - Implementations</a></li>
-				  <li><a href="#2.2.4" title="Constraints">2.2.4 - Robustness</a></li>
-				</ul>
-			  </li>
-			</ul>
+		    </ul>
 		  </li>
           <li><a href="#3.0" title="Getting Started">3.0 - Getting Started</a>
 		    <ul>
 			  <li><a href="#3.1" title="System Requirements">3.1 - System Requirements</a>
+			  	<ul>
+			      <li><a href="#3.1.1" title="Windows">3.1.1 - Windows</a></li>
+				  <li><a href="#3.1.2" title="Mac">3.1.2 - Mac</a></li>
+				  <li><a href="#3.1.3" title="Linux">3.1.3 - Linux</a></li>
+			    </ul>
+			  </li>
+			  <li><a href="#3.2" title="Installation">3.2 - Installation</a>
 			    <ul>
-				  <li><a href="#3.1.1" title="Mac">3.1.1 - Mac</a></li>
-				  <li><a href="#3.1.2" title="Windows">3.1.2 - Windows</a></li>
-				</ul>
+			      <li><a href="#3.2.1" title="Database Setup">3.1.1 - Database Setup</a></li>
+			    </ul>
 			  </li>
 			</ul>
 		  </li>
@@ -94,70 +92,50 @@
 		  <p>Acid Rain has the following constraints: It must be user-friendly, it must be efficient and functional, and it must be secure. It will assume the EMU Science department will take care to only authorize the correct personnel and take care of the software piece responsibly. It will depend on the EMU server system and, as it will use primarily PHP, JavaScript, HTML5, MySQL, and such, it will also depend on an Apache Server to be functional. Acid Rain will place its binary and other code files on Github and use the Github revision control system to organize and store our source code.</p>
           <p>A link to our repository can be found <a href="https://github.com/Swquenzer/acid_rain" target="new">here</a>:</p>
 
-		<a class="anchor" name="2.2"></a>
-	    <h2 id="Framework">2.2 - Framework</h2>
-		
-		  <p>The AcidRain Framework in the following areas will be as such:</p>
-
-          <a class="anchor" name="2.2.1"></a>
-	      <h3 id="Languages">2.2.1 - Languages</h2>
-		  <p>Acid Rain has been developed using PHP, JavaScript, MySQL and HTML5. Temporary Code: pieces of code that are only intended to be used on a temporary basis have a comment starting with ** immediately before it; multi-line pieces of code are immediately followed with a comment starting with !*.</p>
-    
-	      <a class="anchor" name="2.2.2"></a>
-	      <h3 id="Ideology">2.2.2 - Ideology</h2>
-		  <p>This application is designed as a largely client processed application.</p>
-		  
-	      <a class="anchor" name="2.2.3"></a>
-	      <h3 id="Implementations">2.2.3 - Implementations</h2>
-		  <p>This application uses stored queries to perform all of it's database accesses.</p>
-
-          <a class="anchor" name="2.2.4"></a>
-	      <h3 id="Robustness">2.2.4 - Robustness</h2>
-		  <p>This application's components are developed to a designated level of robustness, i.e. mission critical. This designation recognizes that some features simply may not be worth the effort of 100% success while we can not afford for others to fail.</p>
-          <p>A link to our repository can be found <a href="https://github.com/Swquenzer/acid_rain" target="new">here</a>:</p>
-		  
       <a class="anchor" name="3.0"></a>
 	  <h1 id="Getting Started">3.0 - Getting Started</h1>
 	  
-		<p>Before installing AcidRain, it is </p>
+		<p>AcidRain is intended to be a cross-browser, cross-OS piece of software. It runs on an Apache server and uses a MySQL database. As a result, in order to run AcidRain on your machine, you will need to have an Apache server, a PHP engine, and a MySQL database engine installed on your machine. If you already have these installed an running, jump to <a href="#3.2">Installation</a>.</p>
 		  
 		<a class="anchor" name="3.1"></a>
 	    <h2 id="System Requirements">3.1 - System Requirements</h2>
 		
-		  <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+		  <p>AcidRain is designed to be run inside a browser (Internet Explorer, Firefox, Google Chrome, etc.) like a webpage. You will need an Apache-MySQL-PHP (AMP) package installed on your machine for AcidRain to be functional. Depending on the build of your machine, there are different free available software packages to accomplish this goal:</p>
 		  
 		  <a class="anchor" name="3.1.1"></a>
-	      <h3 id="Mac">3.1.1 - Mac</h3>
-		  
-            <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-            open-source application development company. The name
-            <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-            word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-            the name of one of ActiveState&rsquo;s products which is based on
-            <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+	      <h3 id="Windows">3.1.1 - Windows</h3>
+		    <p>If you are running a windows machine, probably the best AMP package you can get is called <a href="http://wampserver.com/en/‎" target="new">WampServer</a>. You can download the software from <a href="http://sourceforge.net/projects/wampserver/" target="new">this page</a> as well. You will need to install this software on your machine before you can continue. Installation instructions can be found <a href="http://www.instructables.com/id/Installing-WAMP-Server/" target="new">here</a>.</p>
+		    <p>Another AMP package for Windows is entitled <a href="http://www.easyphp.org/‎" target="new">EasyPHP</a>. This is a portable package, enabling it to be "picked up" and moved from machine to machine. You can download this server package from <a href="http://www.easyphp.org/easyphp-devserver.php" target="new">this page</a> as well.</p>
+
+		  <a class="anchor" name="3.1.2"></a>
+	      <h3 id="Mac">3.1.2 - Mac</h3>
+		    <p>However, if you have the Mac OS installed on your machine, you will need to download and install <a href="http://www.mamp.info/en/mamp/‎" target="new">MAMP</a>. You can download the it free from <a href="http://mamp.info/en/downloads/" target="new">this page</a>. You will need to install this software on your machine before you can continue. Installation instructions can be found <a href="http://sawmac.com/mamp/" target="new">here</a>.</p>
 			
-	      <a class="anchor" name="3.1.2"></a>
-	      <h3 id="Windows">3.1.2 - Windows</h3>
+		  <a class="anchor" name="3.1.3"></a>			
+	      <h3 id="Linux">3.1.3 - Linux</h3>
+		    <p>If you are running Linux, there are no strong, well-known, easy software packages to install (except BitNami, see below), but instructions for building a LAMP server on Linux can be found <a href="https://www.linux.com/learn/tutorials/288158-easy-lamp-server-installation‎" target="new">here</a> as well as <a href="http://lamphowto.com/" target="new">here</a>.</p>
+
+	      <p>Another cross-platform option for those interested is <a href="http://bitnami.com/" target="new">BitNami</a>. The BitNami Lamp Stack can be downloaded <a href="http://bitnami.com/stack/lamp" target="new">here</a>.</p> 
+
+		<a class="anchor" name="3.2"></a>
+		<h2 id="Installation">3.2 - Installation</h2>
+		
+		  <p>Once you have a AMP package installed and running on your machine, you will need to download and install AcidRain onto this server. Go to our <a href="http://www.github.com/Swquenzer/acid_rain/" target="new">repository</a> and download the entire package by clicking the "Download Zip" button:</p>
+          <p><img src="img/1.png" alt="Download from Github"/></p>
+		  <p>Extract all the contents onto the root-file system of your server (your AMP package). You can either place the contents directly in the root directory (so that they can simply be accessed in your browser by typing "http://localhost/") as such:</p>
+          <p><img src="img/2.png" alt="Root Directory"/></p>
+		  <p>Or you can place them in a subdirectory if you wish (for example, we recommend you create a subdirectory entitled "AcidRain" and place the contents of the bundle inside this directory ("http://localhost/AcidRain/").</p>
+		  <p><img src="img/3.png" alt="AcidRain directory"/></p>
 		  
-            <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-            open-source application development company. The name
-            <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-            word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-            the name of one of ActiveState&rsquo;s products which is based on
-            <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
-		  
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
-		  
+		  <a class="anchor" name="3.2.1"></a>
+	      <h3 id="Database Setup">3.2.1 - Database Setup</h3>
+		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL Administration program (for example, many AMP packages use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
+            <p><img src="img/4.png" alt="Create acid_rain Database"/></p>
+			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database to complete your database setup:</p>
+			<p><img src="img/5.png" alt="Import acid_rain.sql"/></p>
+		
+		<p>Setup should now be complete.</p>
+
 	  <a class="anchor" name="4.0"></a>
 	  <h1 id="Using the System">4.0 - Using the System</h1>
 	  
