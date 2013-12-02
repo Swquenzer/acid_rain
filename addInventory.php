@@ -48,13 +48,13 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					<li><a href="index.php">Home</a></li>|
 					<li><a href="info.php">Info</a></li>|
 					<li><a href="login.php">Login</a></li>
-				</ul>
+				</ul>e
 			</nav>
 		</span>
 	</header>
 	<div id="wrapper">
 		<section id="main">
-			<form class="inputField" id="addInv" method="post"><fieldset>
+			<form class="inputField" id="addInv" action="addNewInventory"><fieldset>
 				<p>
 				    <label id="manufacturerLbl">Manufacturer</label>
 				    <input list="manufacturers" name="manufacturer" required/>
@@ -116,58 +116,95 @@ if( !isset( $_SESSION["loggedIn"] ) )
         require('admin/AcidRainDBLogin.php');
 //!*    
         include('function/DBUpdate.php');
-    
-
-        $mfrID = null;
-	    $stmt = $db->query("CALL Get_Manufacturer");
-        if(!$stmt == false){
-	        $manList = $stmt->fetch_assoc();
-	        //$manRank[$manList.length];
-	        $shortest = -1;
-	        foreach($manList as $man) {
-                slog($man["Name"]);
-		        $lev = levenshtein($_POST['manufacturer'], $man["ManufacturerName"]);
-		        if($lev == 0) {
-                    $mfrID = $man['ManufacturerID'];
-			        //They typed the correct name, continue on with search results
-		        }
-		        else if ($lev <= $shortest || $shortest < 0) {
-		        // set the closest match, and shortest distance
-		        $closest  = $man;
-		        $shortest = $lev;
-	            }
-	        }
-	        #$closest contains the best match 
-            if($mfrID==null && $shortest > 1){
+        
+         $stmt= $db->prepare('CALL find_mfr(?)');
+            $stmt->bind_param("s",$_POST['manufacturer']);
+            if($stmt->execute())
+            {
+                $stmt->bind_result($mfrID);
+                $stmt->fetch();
+                $stmt->close();
+            }else
+                slog($db->error);
+            
+            //check to see if a record was returned
+            if($mfrID==null){
                 $stmt= $db->prepare('CALL addManufacturer(?)');
                 $stmt->bind_param("s",$_POST['manufacturer']);
                 if($stmt->execute()){
                     $stmt->bind_result($mfrID);
                     $stmt->fetch();
-                }else
+                }else{
                     slog($db->error);
-            } else
-                $mfrID = $man['ManufacturerID'];
-            $stmt = $db->query("CALL Get_Chemical($mfrID)");
+                    break;
+                }
+            }
+            
+            // find the chemical
+            $stmt= $db->prepare('CALL Get_Chemical(?,?)');
+            $stmt->bind_param("ss",$mfrID, $_POST['chemical']);
+            if($stmt->execute())
+            {
+                $stmt->bind_result($chemID);
+                $stmt->fetch();
+                $stmt->close();
+            }else
+                slog($db->error);
+            
+            //check to see if a record was returned
+            if($mfrID==null){
+                // redirect to an add chemical form
+            }
+                
+             
+            /*$mfrID = null;
+	        $stmt = $db->query("CALL Get_Manufacturer");
             if(!$stmt == false){
-                $chemList = $stmt->fetch_array(MYSQLI_BOTH); //BOTH is temperary
-	            //$manRank[$manList.length];
-	            $shortest = -1;
-	            foreach($chemList as $man) {
-		            $lev = levenshtein($_POST['chemical'], $man['ManufacturerName']);
+	         $shortest = -1;
+	            while($man = $stmt->fetch_assoc()) {
+		            $lev = levenshtein($_POST['manufacturer'], $man["ManufacturerName"]);
 		            if($lev == 0) {
                         $mfrID = $man['ManufacturerID'];
-			            //They typed the correct name, continue on with search results
+			            return $mfrID;
 		            }
+            
 		            else if ($lev <= $shortest || $shortest < 0) {
 		            // set the closest match, and shortest distance
-		            $closest  = $man;
-		            $shortest = $lev;
+		                $closest  = $man;
+		                $shortest = $lev;
 	                }
 	            }
-            }
-        }else
-            slog($db->error);
+	            #$closest contains the best match 
+                if($mfrID==null && $shortest > 1){
+                    $stmt= $db->prepare('CALL addManufacturer(?)');
+                    $stmt->bind_param("s",$_POST['manufacturer']);
+                    if($stmt->execute()){
+                        $stmt->bind_result($mfrID);
+                        $stmt->fetch();
+                    }else
+                        slog($db->error);
+                } else
+                    $mfrID = $man['ManufacturerID'];
+                $stmt = $db->query("CALL Get_Chemical($mfrID)");
+                if(!$stmt == false){
+                    $chemList = $stmt->fetch_array(MYSQLI_BOTH); //BOTH is temperary
+	                //$manRank[$manList.length];
+	                $shortest = -1;
+	                foreach($chemList as $man) {
+		                $lev = levenshtein($_POST['chemical'], $man['ManufacturerName']);
+		                if($lev == 0) {
+                            $mfrID = $man['ManufacturerID'];
+			                //They typed the correct name, continue on with search results
+		                }
+		                else if ($lev <= $shortest || $shortest < 0) {
+		                // set the closest match, and shortest distance
+		                $closest  = $man;
+		                $shortest = $lev;
+	                    }
+	                }
+                }
+            }else
+                slog($db->error);*/
     }
     
 ?>

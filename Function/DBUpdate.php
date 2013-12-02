@@ -70,15 +70,15 @@ EOD;
 
 $names[7]='Get_Chemical';
 $queries[7] =<<<'EOD'
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Chemical`(manufacturerID Int(11))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Chemical`(manufacturerID Int(11), chemical varchar(45))
 BEGIN
-SELECT `Chemical`.`ID` AS ChemicalID, `Chemical`.`Name` AS ChemicalName
+SELECT `Chemical`.`ID` AS ChemicalID, 
 FROM `Chemical`
-WHERE `chemical`.`MfrID` = manufacturerID;
+WHERE `chemical`.`MfrID` = manufacturerID AND `Chemical`.`Name` = chemical;
 END
 EOD;
 
-$names = 'Get_Manufacturer';
+$names[8] = 'Get_Manufacturer';
 $queries[8] =<<<'EOD'
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Manufacturer`()
 BEGIN
@@ -86,6 +86,18 @@ SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS Manufactu
 FROM `manufacturer`;
 END
 EOD;
+
+$names[9] = 'find_mfr';
+$queries[9] = <<<'EOD'
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `acid_rain`.`find_mfr` (manufacturerName varchar(60))
+BEGIN
+SELECT `manufacturer`.`ID` AS ManufacturerID
+FROM `manufacturer`
+WHERE `manufacturer`.`name` = manufacturerName;
+END
+EOD;
+
 /*
 $functionNames[0] = 'levenshtein';
 $functions[0] = <<<'EOD'
