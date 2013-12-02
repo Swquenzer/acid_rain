@@ -15,7 +15,8 @@
     </div>
     <div id="side-bar">
       <div class="leftSideBar">
-        <p class="sideBarTitle" style="margin-top: 0;">Table of Contents</p>
+        <div style="max-height: 40em; overflow: auto;">
+		<p class="sideBarTitle" style="margin-top: 0;">Table of Contents</p>
         <ul>
           <li><a href="#1.0" title="Introduction">1.0 - Introduction</a>
 		  </li>
@@ -48,6 +49,32 @@
 			</ul>
 		  </li>
           <li><a href="#4.0" title="Using the System">4.0 - Using the System</a>
+		  	<ul>
+			  <li><a href="#4.1" title="Introductory Pages">4.1 - Introductory Pages</a>
+			    <ul>
+				  <li><a href="#4.1.1" title="The Home Page">4.1.1 - The Home Page</a></li>
+			      <li><a href="#4.1.2" title="The Documentation Page">4.1.2 - The Documentation Page</a></li>
+			      <li><a href="#4.1.3" title="Logging In">4.1.3 - Logging In</a></li>
+			    </ul>
+			  </li>
+			  <li><a href="#4.2" title="The Spreadsheet Page">4.2 - The Spreadsheet Page</a>
+			  </li>
+			  <li><a href="#4.3" title="Searching Data">4.3 - Searching Data</a>
+			  </li>
+			  <li><a href="#4.4" title="Adding Data">4.4 - Adding Data</a>
+			  </li>
+			  <li><a href="#4.5" title="Deleting Data">4.5 - Deleting Data</a>
+			  </li>
+			  <li><a href="#4.6" title="Modifying Data">4.6 - Modifying Data</a>
+			  </li>
+			  <li><a href="#4.7" title="Sorting Data">4.7 - Sorting Data</a>
+			  </li>
+			  <li><a href="#4.8" title="Concluding Pages">4.8 - Concluding Pages</a>
+			    <ul>
+				  <li><a href="#4.8.1" title="Logging Out">4.8.1 - Logging Out</a></li>
+			    </ul>
+			  </li>
+			</ul>
 		  </li>
 		  <li><a href="#5.0" title="Advanced">5.0 - Advanced</a>
 		  </li>
@@ -55,9 +82,12 @@
 		  </li>
           <li><a href="#7.0" title="About">7.0 - About</a>
 		  </li>
+		  <li></li>
         </ul>
+		</div>
 		<p class="sideBarTitle"><a href="../spreadsheet.php" style="text-decoration: underline;">Return to Chemical Database ></a></p>
       </div>
+	</div>
 
     <div id="main">
 	  <a class="anchor" name="1.0"></a>
@@ -68,7 +98,7 @@
       <a class="anchor" name="2.0"></a>
       <h1 id="Summary">2.0 - Summary</h1>
 	  
-	  <p>In short, AcidRain provides a convenient way for schools, business, and organizations to store and dynamically view and modify chemical in an orderly fashion.</p>
+	  <p>In short, AcidRain provides a convenient way for schools, business, and organizations to store and dynamically view and modify chemicals in an orderly fashion.</p>
 	  
 		<a class="anchor" name="2.1"></a>
 	    <h2 id="Environment">2.1 - Environment</h2>
@@ -120,7 +150,7 @@
 		<a class="anchor" name="3.2"></a>
 		<h2 id="Installation">3.2 - Installation</h2>
 		
-		  <p>Once you have a AMP package installed and running on your machine, you will need to download and install AcidRain onto this server. Go to our <a href="http://www.github.com/Swquenzer/acid_rain/" target="new">repository</a> and download the entire package by clicking the "Download Zip" button:</p>
+		  <p>Once you have an AMP package installed and running on your machine, you will need to download and install AcidRain onto this server. Go to our <a href="http://www.github.com/Swquenzer/acid_rain/" target="new">repository</a> and download the entire package by clicking the "Download Zip" button:</p>
           <p><img src="img/1.png" alt="Download from Github"/></p>
 		  <p>Extract all the contents onto the root-file system of your server (your AMP package). You can either place the contents directly in the root directory (so that they can simply be accessed in your browser by typing "http://localhost/") as such:</p>
           <p><img src="img/2.png" alt="Root Directory"/></p>
@@ -129,7 +159,7 @@
 		  
 		  <a class="anchor" name="3.2.1"></a>
 	      <h3 id="Database Setup">3.2.1 - Database Setup</h3>
-		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL Administration program (for example, many AMP packages use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
+		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL Administration program (for example, in the following pictures we will use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
             <p><img src="img/4.png" alt="Create acid_rain Database"/></p>
 			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database to complete your database setup:</p>
 			<p><img src="img/5.png" alt="Import acid_rain.sql"/></p>
@@ -139,18 +169,43 @@
 	  <a class="anchor" name="4.0"></a>
 	  <h1 id="Using the System">4.0 - Using the System</h1>
 	  
-		<p>This is version two of Gila, a revision of the
-		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
-          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
-          in February 2003. Following is a summary of the major differences between this version and the
-          original.</p>
+		<p>Once you have everything installed, you should be good to go. Open your browser and point your address to: "http://localhost/", and then navigate your way to the AcidRain root directory (For example, we use: "http://localhost/AcidRain/".</p>
 
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+        <a class="anchor" name="4.1"></a>
+	    <h2 id="Introductory Pages">4.1 - Introductory Pages</h2>
+		
+		  <p>This section describes pages that are helpful to you, or perhaps even needed to access the spreadsheet, but are not the heart of the program itself.</p>
+		  
+		  <a class="anchor" name="4.1.1"></a>
+	      <h3 id="The Home Page">4.1.1 - The Home Page</h3>
+		  
+		    <p><img src="img/6.png" alt="Home on Navigation Bar"/></p>
+		    <p>This is the Home Page. It is what you see when you first access AcidRain. You can view this as your headquarters from which you can access this rest of the site. The Home Page also gives you a general background about the AcidRain project: what it is, who it's for, what to do with it, who wrote it, and so forth. It looks like this:</p>
+			<p><img src="img/7.png" alt="Home Page"/></p>
+			
+		  <a class="anchor" name="4.1.2"></a>
+	      <h3 id="The Documentation Page">4.1.2 - The Documentation Page</h3>
+		  
+		    <p><img src="img/8.png" alt="Documentation on Navigation Bar"/></p>
+			<p>This is the Documentation Page, also called the User Guide or User Manual. It's where you are right now. Here's what it looks like:</p>
+		    <p><img src="img/9.png" alt="Documentation Page"/></p>
+			<p>The Documentation is what describes our project in detail. We intend it to be accessible for all users, from the skilled administrator to the average user. The Table of Contents is on the left:</p>
+            <p><img src="img/10.png" alt="Table of Contents"/></p>
+			<p>It organizes all the data on this page to help you find what you are looking for quickly and easily. In order to go to a specified heading, click the link to view the page in the right hand side. If you don't wee what you are looking for in the Table of Contents, make sure you have scrolled completely to the bottom.</p>
+            <p>In order to return to the main part of the program (the spreadsheet page), click the link below the Table of Contents entitled "Return to Chemical Database":</p>
+			<p><img src="img/11.png" alt="Home Page"/></p>
+			
+		  <a class="anchor" name="4.1.3"></a>
+	      <h3 id="Logging In">4.1.3 - Logging In</h3>
+		  
+		    <p><img src="img/12.png" alt="Login on Navigation Bar"/></p>
+			<p>AcidRain does not allow anyone to view, add, or delete data, only authorized users. In order to view the data, you go to the Login page (Note: Attempts to access the Spreadsheet page without prior authorization will result in the user's browser being directed back to the Login page. Here is what you will see:</p>
+		    <p><img src="img/13.png" alt="Login Page"/></p>
+			<p>Enter your password to login. Note the "Stay logged in" option. By default, it is checked, which means that AcidRain will place a cookie on your computer to remember that you are logged in the next time you visit this program, for added convenience. If you do not wish to have cookies stored on your computer and therefore wish to log in every time, uncheck the box:</p>
+            <p><img src="img/14.png" alt="'Stay logged in' option"/></p>
+			<p>Once you enter the correct password, you will automatically be directed to the Spreadsheet Page.</p>
+			<p><b>Note for administrators:</b> In order to change the password, access the login.php file in the the AcidRain root directory on your server, edit it, and in the first few lines, change the code <code style="font-size: 150%; color: blue;">if( $_REQUEST["password"] == "testpassword" )</code>, replacing the string in quotes at the end with whatever you wish to be your password:</p>
+			<p><img src="img/15.png" alt="Change PHP Code"/></p>
 		  
 	  <a class="anchor" name="5.0"></a>
 	  <h1 id="Advanced">5.0 - Advanced</h1>
