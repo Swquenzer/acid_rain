@@ -80,7 +80,7 @@ if( isset($_REQUEST['callback'])){
 if(isset($_POST['submit'])) {
 	require('../admin/AcidRainDBLogin.php');
 	$stmt = $db->query("CALL Get_Manufacturer()");
-	$manList = $stmt->fetch_array(MYSQLI_BOTH); //BOTH is temperary
+	$manList = $stmt->fetch_array(MYSQLI_BOTH); //BOTH is temporary
 	printf("$result[0]: %s\n", $result[0]); //test
 	printf("$result[1]: %s\n", $result[1]); //test
 	//$manRank[$manList.length];
