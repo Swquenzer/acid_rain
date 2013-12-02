@@ -62,3 +62,9 @@
 12/02/13 08:05:17 :   PROCEDURE addManufacturer already exists
 12/02/13 08:05:17 :   PROCEDURE Get_Chemical already exists
 12/02/13 08:05:17 :   PROCEDURE Get_Manufacturer already exists
+12/02/13 13:09:53 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `Chemical`
+WHERE `chemical`.`MfrID` = manufacturerID AND `Chemical`.`Name` ' at line 4
+12/02/13 13:13:45 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `Chemical`
+WHERE `chemical`.`MfrID` = manufacturerID AND `Chemical`.`Name` ' at line 4
+12/02/13 13:19:19 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `Chemical`
+WHERE `chemical`.`MfrID` = manufacturerID AND `Chemical`.`Name` ' at line 4

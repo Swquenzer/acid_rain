@@ -70,11 +70,11 @@ EOD;
 
 $names[7]='Get_Chemical';
 $queries[7] =<<<'EOD'
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Chemical`(manufacturerID Int(11), chemical varchar(45))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Chemical`(manufacturerID Int(11), chem varchar(45))
 BEGIN
-SELECT `Chemical`.`ID` AS ChemicalID, 
+SELECT `Chemical`.`ID` AS ChemicalID
 FROM `Chemical`
-WHERE `chemical`.`MfrID` = manufacturerID AND `Chemical`.`Name` = chemical;
+WHERE `Chemical`.`MfrID` = manufacturerID AND `Chemical`.`Name` = chem;
 END
 EOD;
 
