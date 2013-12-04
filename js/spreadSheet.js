@@ -4,7 +4,7 @@
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
     getData("function/tbl.php", "returnTable", "page=1", true);
-	rowCheck();
+	deleteRows();
 };
 
 function returnTable(recSet) {
@@ -52,6 +52,18 @@ function loadError() {
     parent.removeChild(table);
     parent.appendChild(errMsg);
 }
+
+function deleteRows() {
+	$(function() {
+		$("#delete").click(function() {
+			//Process form here
+			alert('ello mate');
+			deleteForm('inputField');
+			createForm('main');
+			rowCheck();
+		});
+	});
+}
 function addCheckboxes() {
 ///<summary>In the event that the database query does not execute correctly replaces the table with error text</summary>
 //Adds checkboxes to all rows in spreadsheet
@@ -85,10 +97,10 @@ function deleteForm(formClass) {
 var ajax_caller = function(record) {
 	$.ajax({
 		type: 'POST',
-		url: 'Function/deleteRecord.php',
+		url: 'function/deleteRecord.php',
 		data: {'location': record[0], 'name': record[1], 'amount': record[2]},
 		success: function() {
-			//alert("Success");
+			alert("Success");
 		},
 		error: function() {
 			alert('error processing ajax request: check spreadsheet.js');
