@@ -220,3 +220,7 @@ pip-log.txt
 #IIS config file
 .config
 
+##########
+## Stephen's
+##########
+extras\*

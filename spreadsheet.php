@@ -27,6 +27,13 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<style>
+		#deleteForm input[type='button'] {
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -35,7 +42,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 			<nav id="navMenu">
 				<ul>
 					<li><a href="index.php">Home</a></li>|
-					<li><a href="info.php">Info</a></li>|
+					<li><a href="./help">Documentation</a></li>|
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>
@@ -171,6 +178,16 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					</tr>
 				</tbody>
 			</table>
+			<!-- display=none if delete is set -->
+			<form class="inputField" action="">
+				<fieldset>
+					<p><span class="inputFieldCenter">
+						<label for="submit">Delete chemical records: </label>
+						<input type="submit" name="delete" id="delete" value="Delete Chemicals"/>
+					</span></p>
+				</fieldset>
+			</form>
+			<?php //} ?>
 		</section>
 	</div><!--End Wrapper-->
 	<footer>

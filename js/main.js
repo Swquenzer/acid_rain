@@ -44,6 +44,7 @@ function makeTableRow(contents) {
     for (var i = 0; i < contents.length; i++) {
         var td = document.createElement("td");
         td.innerHTML = contents[i];
+		td.setAttribute('id', i.toString()); //Added by Stephen, each row now has id 0-(#rows)
         row.appendChild(td);
     }
     return row;

@@ -1,10 +1,10 @@
 ﻿//spreadSheet.js
-
 ///<reference path="main.js"/>
 
 // declare an anonymous function to run once the page has loaded
 window.onload = function () {
     getData("function/tbl.php", "returnTable", "page=1", true);
+	deleteRows();
 };
 
 function returnTable(recSet) {
@@ -51,4 +51,88 @@ function loadError() {
 
     parent.removeChild(table);
     parent.appendChild(errMsg);
+}
+
+function deleteRows() {
+	$(function() {
+		$("#delete").click(function() {
+			//Process form here
+			deleteForm('inputField');
+			createForm('main');
+			rowCheck();
+		});
+	});
+}
+function addCheckboxes() {
+///<summary>In the event that the database query does not execute correctly replaces the table with error text</summary>
+//Adds checkboxes to all rows in spreadsheet
+//Checkboxes are set with values cb0 through cb(#rows)
+    var i=0;
+    $("table td:first-child").each(function() {
+            //Cycle through each row in the table
+            var cb = document.createElement("input");
+            cb.setAttribute("type", "checkbox");
+            cb.setAttribute("value", "cb"+i);
+            cb.setAttribute("name", "delete");
+            $(this).prepend(cb);
+            i++;
+    });
+}
+function createForm(main) {
+	addCheckboxes();
+	//var form = document.createElement("form");
+	//form.setAttribute("action", ""); //update action
+	//form.setAttribute("method", "post");
+	var section = document.getElementById(main);
+	$('#main').wrapInner("<form id='deleteForm' class='inputField'></form>");
+	$('#main').prepend("<h1>Delete records</h1>");
+	$('#deleteForm').append("<input type='button' id='submitDelete' value='Delete Records' onClick='processDelete()'>");
+}
+
+function deleteForm(formClass) {
+	$("."+formClass).remove();
+}
+
+var ajax_caller = function(record) {
+	$.ajax({
+		type: 'POST',
+		url: 'function/deleteRecord.php',
+		data: {'location': record[0], 'name': record[1], 'amount': record[2]},
+		success: function() {
+			//alert("Success");
+		},
+		error: function() {
+			alert('error processing ajax request: check spreadsheet.js');
+		},
+	});
+}
+
+function processDelete() {
+	var ajax_calls = [];
+    $('input[type=checkbox]').each(function () {
+		var cb = this;
+        var cbBool = (this.checked ? "1" : "0");
+        if(cbBool==1) {
+			row = cb.parentNode.parentNode;
+			//Get individual record data
+			record = [];
+			for(var i=1; i < row.children.length; i++) {
+				record.push(row.children[i].innerHTML);
+			}
+			//ajax call
+			//Create array of deferred objects
+			ajax_calls.push(ajax_caller(record));
+			$.when.apply(this, ajax_calls).done(function() {
+				$(row).fadeOut(300, function() { $(this).remove(); });
+			});
+        }
+    });
+}
+//Selects checkbox by clicking anywhere in tr
+function rowCheck() {
+	$('#chemical_spreadsheet tr').click(function(event) {
+		if(event.target.type !== 'checkbox') {
+			$(':checkbox',this).trigger('click');
+		}
+	});
 }

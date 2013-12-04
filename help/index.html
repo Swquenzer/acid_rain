@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="author" content="haran" />
+    <meta name="generator" content="haran" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Chemical Database User Documentation</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="headerTitle">
+		<span>Chemical Database User Documentation</span>
+      </h1>
+    </div>
+    <div id="side-bar">
+      <div class="leftSideBar">
+        <div style="max-height: 40em; overflow: auto;">
+		<p class="sideBarTitle" style="margin-top: 0;">Table of Contents</p>
+        <ul>
+          <li><a href="#1.0" title="Introduction">1.0 - Introduction</a>
+		  </li>
+          <li><a href="#2.0" title="Summary">2.0 - Summary</a>
+		  	<ul>
+			  <li><a href="#2.1" title="Environment">2.1 - Environment</a>
+			    <ul>
+				  <li><a href="#2.1.1" title="Developers">2.1.1 - Developers</a></li>
+				  <li><a href="#2.1.2" title="Modifiers">2.1.2 - Modifiers</a></li>
+				  <li><a href="#2.1.3" title="Viewers">2.1.3 - Viewers</a></li>
+				  <li><a href="#2.1.4" title="Constraints">2.1.4 - Constraints</a></li>
+				</ul>
+			  </li>
+		    </ul>
+		  </li>
+          <li><a href="#3.0" title="Getting Started">3.0 - Getting Started</a>
+		    <ul>
+			  <li><a href="#3.1" title="System Requirements">3.1 - System Requirements</a>
+			  	<ul>
+			      <li><a href="#3.1.1" title="Windows">3.1.1 - Windows</a></li>
+				  <li><a href="#3.1.2" title="Mac">3.1.2 - Mac</a></li>
+				  <li><a href="#3.1.3" title="Linux">3.1.3 - Linux</a></li>
+			    </ul>
+			  </li>
+			  <li><a href="#3.2" title="Installation">3.2 - Installation</a>
+			    <ul>
+			      <li><a href="#3.2.1" title="Database Setup">3.1.1 - Database Setup</a></li>
+			    </ul>
+			  </li>
+			</ul>
+		  </li>
+          <li><a href="#4.0" title="Using the System">4.0 - Using the System</a>
+		  	<ul>
+			  <li><a href="#4.1" title="Introductory Pages">4.1 - Introductory Pages</a>
+			    <ul>
+				  <li><a href="#4.1.1" title="The Home Page">4.1.1 - The Home Page</a></li>
+			      <li><a href="#4.1.2" title="The Documentation Page">4.1.2 - The Documentation Page</a></li>
+			      <li><a href="#4.1.3" title="Logging In">4.1.3 - Logging In</a></li>
+			    </ul>
+			  </li>
+			  <li><a href="#4.2" title="The Spreadsheet Page">4.2 - The Spreadsheet Page</a>
+			  </li>
+			  <li><a href="#4.3" title="Searching Data">4.3 - Searching Data</a>
+			  </li>
+			  <li><a href="#4.4" title="Adding Data">4.4 - Adding Data</a>
+			  </li>
+			  <li><a href="#4.5" title="Deleting Data">4.5 - Deleting Data</a>
+			  </li>
+			  <li><a href="#4.6" title="Modifying Data">4.6 - Modifying Data</a>
+			  </li>
+			  <li><a href="#4.7" title="Sorting Data">4.7 - Sorting Data</a>
+			  </li>
+			  <li><a href="#4.8" title="Concluding Pages">4.8 - Concluding Pages</a>
+			    <ul>
+				  <li><a href="#4.8.1" title="Logging Out">4.8.1 - Logging Out</a></li>
+			    </ul>
+			  </li>
+			</ul>
+		  </li>
+		  <li><a href="#5.0" title="Advanced">5.0 - Advanced</a>
+		  </li>
+          <li><a href="#6.0" title="Other">6.0 - Other</a>
+		  </li>
+          <li><a href="#7.0" title="About">7.0 - About</a>
+		  </li>
+		  <li></li>
+        </ul>
+		</div>
+		<p class="sideBarTitle"><a href="../spreadsheet.php" style="text-decoration: underline;">Return to Chemical Database ></a></p>
+      </div>
+	</div>
+
+    <div id="main">
+	  <a class="anchor" name="1.0"></a>
+	  <h1 id="Introduction" style="margin-top: 0;">1.0 - Introduction</h1>
+	  
+		<p>AcidRain is a project that intends to improve the efficiency and convenience of the Chemical Safety Sheet process by placing all Chemical Safety Sheets (CSS) along with their connections to the corresponding Material Safety Data Sheets (MSDS) on a dynamic database whose interface is accessible to all authorized personnel, allowing for a more effective way of storing data. This database and its interface will also give authorized users that ability to control and modify the database as the needs arises. The database interface is designed for use by our local EMU Science Department as well as the Harrisonburg Fire Department in case of emergency.</p>
+         
+      <a class="anchor" name="2.0"></a>
+      <h1 id="Summary">2.0 - Summary</h1>
+	  
+	  <p>In short, AcidRain provides a convenient way for schools, business, and organizations to store and dynamically view and modify chemicals in an orderly fashion.</p>
+	  
+		<a class="anchor" name="2.1"></a>
+	    <h2 id="Environment">2.1 - Environment</h2>
+		
+		  <p>The following Users, or Actors, will be present in the AcidRain environment:</p>
+
+          <a class="anchor" name="2.1.1"></a>
+	      <h3 id="Developers">2.1.1 - Developers</h2>
+		  <p>These are the AcidRain team, namely Isaac Tice, Stephan Quenzer, and Josiah Driver. Their role is to plan, create, analyze, implement, install, modify, verify, document, deploy, and maintain the software in its environment. They also interact with selected, intended users to discover and clarify user requirements and specifications.</p>
+    
+	      <a class="anchor" name="2.1.2"></a>
+	      <h3 id="Modifiers">2.1.2 - Modifiers</h2>
+		  <p>These are EMU students or faculty who are given access to the database interface with the ability to not only view data but insert new data as well as correct, edit, and delete existing data.</p>
+		  
+	      <a class="anchor" name="2.1.3"></a>
+	      <h3 id="Viewers">2.1.3 - Viewers</h2>
+		  <p>These are those who for any reason wish to view the data, for example, the Harrisonburg Fire Chief, but are not given authority to modify it.</p>
+
+          <a class="anchor" name="2.1.4"></a>
+	      <h3 id="Cosntraints">2.1.4 - Constraints</h2>
+		  <p>Acid Rain has the following constraints: It must be user-friendly, it must be efficient and functional, and it must be secure. It will assume the EMU Science department will take care to only authorize the correct personnel and take care of the software piece responsibly. It will depend on the EMU server system and, as it will use primarily PHP, JavaScript, HTML5, MySQL, and such, it will also depend on an Apache Server to be functional. Acid Rain will place its binary and other code files on Github and use the Github revision control system to organize and store our source code.</p>
+          <p>A link to our repository can be found <a href="https://github.com/Swquenzer/acid_rain" target="new">here</a>:</p>
+
+      <a class="anchor" name="3.0"></a>
+	  <h1 id="Getting Started">3.0 - Getting Started</h1>
+	  
+		<p>AcidRain is intended to be a cross-browser, cross-OS piece of software. It runs on an Apache server and uses a MySQL database. As a result, in order to run AcidRain on your machine, you will need to have an Apache server, a PHP engine, and a MySQL database engine installed on your machine. If you already have these installed an running, jump to <a href="#3.2">Installation</a>.</p>
+		  
+		<a class="anchor" name="3.1"></a>
+	    <h2 id="System Requirements">3.1 - System Requirements</h2>
+		
+		  <p>AcidRain is designed to be run inside a browser (Internet Explorer, Firefox, Google Chrome, etc.) like a webpage. You will need an Apache-MySQL-PHP (AMP) package installed on your machine for AcidRain to be functional. Depending on the build of your machine, there are different free available software packages to accomplish this goal:</p>
+		  
+		  <a class="anchor" name="3.1.1"></a>
+	      <h3 id="Windows">3.1.1 - Windows</h3>
+		    <p>If you are running a windows machine, probably the best AMP package you can get is called <a href="http://wampserver.com/en/‎" target="new">WampServer</a>. You can download the software from <a href="http://sourceforge.net/projects/wampserver/" target="new">this page</a> as well. You will need to install this software on your machine before you can continue. Installation instructions can be found <a href="http://www.instructables.com/id/Installing-WAMP-Server/" target="new">here</a>.</p>
+		    <p>Another AMP package for Windows is entitled <a href="http://www.easyphp.org/‎" target="new">EasyPHP</a>. This is a portable package, enabling it to be "picked up" and moved from machine to machine. You can download this server package from <a href="http://www.easyphp.org/easyphp-devserver.php" target="new">this page</a> as well.</p>
+
+		  <a class="anchor" name="3.1.2"></a>
+	      <h3 id="Mac">3.1.2 - Mac</h3>
+		    <p>However, if you have the Mac OS installed on your machine, you will need to download and install <a href="http://www.mamp.info/en/mamp/‎" target="new">MAMP</a>. You can download the it free from <a href="http://mamp.info/en/downloads/" target="new">this page</a>. You will need to install this software on your machine before you can continue. Installation instructions can be found <a href="http://sawmac.com/mamp/" target="new">here</a>.</p>
+			
+		  <a class="anchor" name="3.1.3"></a>			
+	      <h3 id="Linux">3.1.3 - Linux</h3>
+		    <p>If you are running Linux, there are no strong, well-known, easy software packages to install (except BitNami, see below), but instructions for building a LAMP server on Linux can be found <a href="https://www.linux.com/learn/tutorials/288158-easy-lamp-server-installation‎" target="new">here</a> as well as <a href="http://lamphowto.com/" target="new">here</a>.</p>
+
+	      <p>Another cross-platform option for those interested is <a href="http://bitnami.com/" target="new">BitNami</a>. The BitNami Lamp Stack can be downloaded <a href="http://bitnami.com/stack/lamp" target="new">here</a>.</p> 
+
+		<a class="anchor" name="3.2"></a>
+		<h2 id="Installation">3.2 - Installation</h2>
+		
+		  <p>Once you have an AMP package installed and running on your machine, you will need to download and install AcidRain onto this server. Go to our <a href="http://www.github.com/Swquenzer/acid_rain/" target="new">repository</a> and download the entire package by clicking the "Download Zip" button:</p>
+          <p><img src="img/1.png" alt="Download from Github"/></p>
+		  <p>Extract all the contents onto the root-file system of your server (your AMP package). You can either place the contents directly in the root directory (so that they can simply be accessed in your browser by typing "http://localhost/") as such:</p>
+          <p><img src="img/2.png" alt="Root Directory"/></p>
+		  <p>Or you can place them in a subdirectory if you wish (for example, we recommend you create a subdirectory entitled "AcidRain" and place the contents of the bundle inside this directory ("http://localhost/AcidRain/").</p>
+		  <p><img src="img/3.png" alt="AcidRain directory"/></p>
+		  
+		  <a class="anchor" name="3.2.1"></a>
+	      <h3 id="Database Setup">3.2.1 - Database Setup</h3>
+		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL Administration program (for example, in the following pictures we will use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
+            <p><img src="img/4.png" alt="Create acid_rain Database"/></p>
+			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database:</p>
+			<p><img src="img/5.png" alt="Import acid_rain.sql"/></p>
+			<p>You will also need to create a user on your database that has access to the database. If it has not been added already, create a global user named "web", with host "localhost", and grant it the privileges of "select" and "execute". However, give it full database-specific privileges.
+		
+		<p>Setup should now be complete.</p>
+
+	  <a class="anchor" name="4.0"></a>
+	  <h1 id="Using the System">4.0 - Using the System</h1>
+	  
+		<p>Once you have everything installed, you should be good to go. Open your browser and point your address to: "http://localhost/", and then navigate your way to the AcidRain root directory (For example, we use: "http://localhost/AcidRain/".</p>
+
+        <a class="anchor" name="4.1"></a>
+	    <h2 id="Introductory Pages">4.1 - Introductory Pages</h2>
+		
+		  <p>This section describes pages that are helpful to you, or perhaps even needed to access the spreadsheet, but are not the heart of the program itself.</p>
+		  
+		  <a class="anchor" name="4.1.1"></a>
+	      <h3 id="The Home Page">4.1.1 - The Home Page</h3>
+		  
+		    <p><img src="img/6.png" alt="Home on Navigation Bar"/></p>
+		    <p>This is the Home Page. It is what you see when you first access AcidRain. You can view this as your headquarters from which you can access this rest of the site. The Home Page also gives you a general background about the AcidRain project: what it is, who it's for, what to do with it, who wrote it, and so forth. It looks like this:</p>
+			<p><img src="img/7.png" alt="Home Page"/></p>
+			
+		  <a class="anchor" name="4.1.2"></a>
+	      <h3 id="The Documentation Page">4.1.2 - The Documentation Page</h3>
+		  
+		    <p><img src="img/8.png" alt="Documentation on Navigation Bar"/></p>
+			<p>This is the Documentation Page, also called the User Guide or User Manual. It's where you are right now. Here's what it looks like:</p>
+		    <p><img src="img/9.png" alt="Documentation Page"/></p>
+			<p>The Documentation is what describes our project in detail. We intend it to be accessible for all users, from the skilled administrator to the average user. The Table of Contents is on the left:</p>
+            <p><img src="img/10.png" alt="Table of Contents"/></p>
+			<p>It organizes all the data on this page to help you find what you are looking for quickly and easily. In order to go to a specified heading, click the link to view the page in the right hand side. If you don't wee what you are looking for in the Table of Contents, make sure you have scrolled completely to the bottom.</p>
+            <p>In order to return to the main part of the program (the spreadsheet page), click the link below the Table of Contents entitled "Return to Chemical Database":</p>
+			<p><img src="img/11.png" alt="Home Page"/></p>
+			
+		  <a class="anchor" name="4.1.3"></a>
+	      <h3 id="Logging In">4.1.3 - Logging In</h3>
+		  
+		    <p><img src="img/12.png" alt="Login on Navigation Bar"/></p>
+			<p>AcidRain does not allow anyone to view, add, or delete data, only authorized users. In order to view the data, you go to the Login page (Note: Attempts to access the Spreadsheet page without prior authorization will result in the user's browser being directed back to the Login page. Here is what you will see:</p>
+		    <p><img src="img/13.png" alt="Login Page"/></p>
+			<p>Enter your password to login. Note the "Stay logged in" option. By default, it is checked, which means that AcidRain will place a cookie on your computer to remember that you are logged in the next time you visit this program, for added convenience. If you do not wish to have cookies stored on your computer and therefore wish to log in every time, uncheck the box:</p>
+            <p><img src="img/14.png" alt="'Stay logged in' option"/></p>
+			<p>Once you enter the correct password, you will automatically be directed to the Spreadsheet Page.</p>
+			<p><b>Note for administrators:</b> In order to change the password, access the login.php file in the the AcidRain root directory on your server, edit it, and in the first few lines, change the code <code style="font-size: 150%; color: blue;">if( $_REQUEST["password"] == "testpassword" )</code>, replacing the string in quotes at the end with whatever you wish to be your password:</p>
+			<p><img src="img/15.png" alt="Change PHP Code"/></p>
+		  
+	  <a class="anchor" name="5.0"></a>
+	  <h1 id="Advanced">5.0 - Advanced</h1>
+	  
+		<p>This is version two of Gila, a revision of the
+		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
+          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
+          in February 2003. Following is a summary of the major differences between this version and the
+          original.</p>
+
+        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
+          open-source application development company. The name
+          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
+          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
+          the name of one of ActiveState&rsquo;s products which is based on
+          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+		  
+	  <a class="anchor" name="6.0"></a>
+	  <h1 id="Other">6.0 - Other</h1>
+	  
+		<p>This is version two of Gila, a revision of the
+		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
+          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
+          in February 2003. Following is a summary of the major differences between this version and the
+          original.</p>
+
+        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
+          open-source application development company. The name
+          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
+          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
+          the name of one of ActiveState&rsquo;s products which is based on
+          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+		  
+	  <a class="anchor" name="7.0"></a>
+	  <h1 id="About">7.0 - About</h1>
+	  
+		<p>This is version two of Gila, a revision of the
+		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
+          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
+          in February 2003. Following is a summary of the major differences between this version and the
+          original.</p>
+
+        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
+          open-source application development company. The name
+          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
+          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
+          the name of one of ActiveState&rsquo;s products which is based on
+          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+
+	  <div id="footer">
+      <div>
+        Copyright &copy; 2013, Stephan Quenzer, Isaac Tice, and Josiah Driver | Modified December 2013 by <a href="mailto:josiah.driver@emu.edu" title="Email">Josiah Driver</a>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
