@@ -161,8 +161,9 @@
 	      <h3 id="Database Setup">3.2.1 - Database Setup</h3>
 		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL Administration program (for example, in the following pictures we will use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
             <p><img src="img/4.png" alt="Create acid_rain Database"/></p>
-			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database to complete your database setup:</p>
+			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database:</p>
 			<p><img src="img/5.png" alt="Import acid_rain.sql"/></p>
+			<p>You will also need to create a user on your database that has access to the database. If it has not been added already, create a global user named "web", with host "localhost", and grant it the privileges of "select" and "execute". However, give it full database-specific privileges.
 		
 		<p>Setup should now be complete.</p>
 
