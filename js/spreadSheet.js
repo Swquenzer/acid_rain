@@ -57,7 +57,6 @@ function deleteRows() {
 	$(function() {
 		$("#delete").click(function() {
 			//Process form here
-			alert('ello mate');
 			deleteForm('inputField');
 			createForm('main');
 			rowCheck();
@@ -100,7 +99,7 @@ var ajax_caller = function(record) {
 		url: 'function/deleteRecord.php',
 		data: {'location': record[0], 'name': record[1], 'amount': record[2]},
 		success: function() {
-			alert("Success");
+			//alert("Success");
 		},
 		error: function() {
 			alert('error processing ajax request: check spreadsheet.js');
