@@ -31,7 +31,7 @@ EOD;
 
 $names[3] = 'Get_Manufacturer';
 $queries[3] = <<<'EOD'
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Find_Manufacturer`(ManufacturerName varchar(60))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Manufacturer`()
 BEGIN
 SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS ManufacturerName
 FROM `manufacturer`;
@@ -101,7 +101,7 @@ EOD;
 for ($i =0;$i<count($queries);$i++){
     if(!$devDB->query("DROP procedure IF EXISTS `$names[$i]`;"))
         slog($devDB->error);
-    if(!$devDB->query($queries[$i]))
+    if(!$devDB->multi_query($queries[$i]))
         slog($devDB->error);
 }
 /*for ($i =0;$i<count($functions);$i++){
