@@ -1,75 +1,31 @@
-[2:02 pm]:test
-11//01//13 14:03:50:   test
-11/01/13 14:04:22:   test
-11/01/13 14:05:47 :   test
-11/01/13 18:10:01 :   test
-11/01/13 18:10:07 :   test
-11/01/13 18:10:16 :   test
-11/20/13 23:16:01 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 17:10:31 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 17:11:13 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 17:11:13 :   Unknown column 'Manufacturer.name' in 'field list'
-11/25/13 18:35:51 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:35:57 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:37:06 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:37:06 :   Unknown column 'Manufacturer.name' in 'field list'
-11/25/13 18:41:48 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:42:27 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:42:34 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:52:24 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:53:19 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:53:19 :   Unknown column 'Manufacturer.name' in 'field list'
-11/25/13 18:53:39 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:53:39 :   Unknown column 'Manufacturer.name' in 'field list'
-11/25/13 18:53:45 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:53:47 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:55:52 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:55:55 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:56:01 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:56:26 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:57:00 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:57:03 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 18:57:13 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 19:05:05 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 19:15:46 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 19:15:53 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 19:15:57 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 20:18:08 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 20:21:47 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 20:21:52 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 20:22:00 :   PROCEDURE Find_Manufacturer already exists
-11/25/13 20:22:06 :   PROCEDURE Find_Manufacturer already exists
-11/26/13 03:34:55 :   PROCEDURE Find_Manufacturer already exists
-11/26/13 03:35:09 :   PROCEDURE Find_Manufacturer already exists
-11/26/13 03:35:11 :   PROCEDURE Find_Manufacturer already exists
-11/26/13 03:35:17 :   PROCEDURE Find_Manufacturer already exists
-11/26/13 03:35:18 :   PROCEDURE Find_Manufacturer already exists
-11/29/13 00:30:28 :   PROCEDURE Find_Manufacturer already exists
-11/29/13 00:30:44 :   PROCEDURE Find_Manufacturer already exists
-11/29/13 00:30:47 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:32:22 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:32:34 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:32:38 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:34:44 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:34:54 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:36:48 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:36:50 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:36:56 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 17:58:45 :   PROCEDURE Find_Manufacturer already exists
-11/30/13 18:16:27 :   PROCEDURE Find_Manufacturer already exists
-12/01/13 22:43:53 :   PROCEDURE Find_Manufacturer already exists
-12/01/13 23:37:20 :   PROCEDURE Find_Manufacturer already exists
-12/02/13 01:34:46 :   PROCEDURE Find_Manufacturer already exists
-12/02/13 01:34:50 :   PROCEDURE Find_Manufacturer already exists
-12/02/13 01:35:02 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:36:22 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:36:53 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:56:02 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:56:19 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:56:43 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:57:07 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 17:58:12 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 18:00:11 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 18:01:16 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 18:02:28 :   PROCEDURE Find_Manufacturer already exists
-12/04/13 18:08:53 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:03:29 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:03:55 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:04:11 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:04:45 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:04:48 :   test
+12/04/13 19:04:48 :   prepared query.
+12/04/13 19:04:51 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:06:05 :   test
+12/04/13 19:06:05 :   prepared query.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Size = ?' at line 1
+12/04/13 19:06:33 :   test
+12/04/13 19:06:33 :   prepared query.Unknown column 'Location' in 'where clause'
+12/04/13 19:07:15 :   test
+12/04/13 19:07:15 :   prepared query.
+12/04/13 19:07:46 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 19:07:49 :   test
+12/04/13 19:07:49 :   prepared query.
+12/04/13 19:08:51 :   test
+12/04/13 19:08:51 :   CabinetArabinose10
+12/04/13 19:11:47 :   PROCEDURE Find_Manufacturer already exists
+12/04/13 23:13:46 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 18:39:49 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 19:01:30 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 21:21:11 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 21:54:05 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 22:30:59 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 22:30:59 :   Unknown column 'Manufacturer.name' in 'field list'
+12/05/13 22:31:45 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 22:31:45 :   Unknown column 'Manufacturer.name' in 'field list'
+12/05/13 22:49:47 :   PROCEDURE Find_Manufacturer already exists
+12/05/13 22:49:47 :   Unknown column 'Manufacturer.name' in 'field list'
+12/06/13 02:01:59 :   PROCEDURE Find_Manufacturer already exists

@@ -56,12 +56,12 @@
 	<footer>
 	<span id="footerContent">
 	<a href="http://www.emu.edu"><img src="gfx/emu.png" width="200px" height="80px"></a>
-	<ul>
+	<!--<ul>
 		<li><a href="#">Link 1</a></li>
 		<li> &nbsp; | &nbsp; <a href="#">Link 2</a></li>
 		<li> &nbsp; | &nbsp; <a href="#">Link 3</a></li>
 		<li> &nbsp; | &nbsp; <a href="#">Link 4</a></li>
-	</ul>
+	</ul>-->
 	</span>
 	</footer>
 <!-- KEEP JAVASCRIPT AT END OF BODY -->

@@ -77,10 +77,17 @@
 			</ul>
 		  </li>
 		  <li><a href="#5.0" title="Advanced">5.0 - Advanced</a>
+		    <ul>
+			  <li><a href="#5.1" title="Database Administration">5.1 - Database Administration</a>
+			   <ul>
+				  <li><a href="#5.1.1" title="The Chemical Table">5.1.1 - The Chemical Table</a></li>
+				  <li><a href="#5.1.2" title="The Inventory Table">5.1.2 - The Inventory Table</a></li>
+                  <li><a href="#5.1.3" title="The Manufacturer Table">5.1.3 - The Manufacturer Table</a></li>
+			    </ul>
+			  </li>			  
+			</ul>
 		  </li>
           <li><a href="#6.0" title="Other">6.0 - Other</a>
-		  </li>
-          <li><a href="#7.0" title="About">7.0 - About</a>
 		  </li>
 		  <li></li>
         </ul>
@@ -118,18 +125,19 @@
 		  <p>These are those who for any reason wish to view the data, for example, the Harrisonburg Fire Chief, but are not given authority to modify it.</p>
 
           <a class="anchor" name="2.1.4"></a>
-	      <h3 id="Cosntraints">2.1.4 - Constraints</h2>
+	      <h3 id="Constraints">2.1.4 - Constraints</h2>
 		  <p>Acid Rain has the following constraints: It must be user-friendly, it must be efficient and functional, and it must be secure. It will assume the EMU Science department will take care to only authorize the correct personnel and take care of the software piece responsibly. It will depend on the EMU server system and, as it will use primarily PHP, JavaScript, HTML5, MySQL, and such, it will also depend on an Apache Server to be functional. Acid Rain will place its binary and other code files on Github and use the Github revision control system to organize and store our source code.</p>
           <p>A link to our repository can be found <a href="https://github.com/Swquenzer/acid_rain" target="new">here</a>:</p>
 
       <a class="anchor" name="3.0"></a>
 	  <h1 id="Getting Started">3.0 - Getting Started</h1>
 	  
-		<p>AcidRain is intended to be a cross-browser, cross-OS piece of software. It runs on an Apache server and uses a MySQL database. As a result, in order to run AcidRain on your machine, you will need to have an Apache server, a PHP engine, and a MySQL database engine installed on your machine. If you already have these installed an running, jump to <a href="#3.2">Installation</a>.</p>
+		<p>AcidRain is intended to be a cross-browser, cross-OS piece of software. It runs on an Apache server and uses a MySQL database. As a result, in order to run AcidRain on your machine, you will need to have an Apache server, a PHP engine, and a MySQL database engine installed on your machine. If you already have these installed and running, jump to <a href="#3.2">Installation</a>.</p>
 		  
 		<a class="anchor" name="3.1"></a>
 	    <h2 id="System Requirements">3.1 - System Requirements</h2>
 		
+		  <p>AcidRain was developed on PHP 5.3, Apache 2.2, and MySQL 5.0. We recommend that you install that latest version of each of these pieces; however, we believe that AcidRain should work on any AMP package with PHP 5.3 or later, Apache 2.2 or later, and MySQL 5.0 or later.</p>
 		  <p>AcidRain is designed to be run inside a browser (Internet Explorer, Firefox, Google Chrome, etc.) like a webpage. You will need an Apache-MySQL-PHP (AMP) package installed on your machine for AcidRain to be functional. Depending on the build of your machine, there are different free available software packages to accomplish this goal:</p>
 		  
 		  <a class="anchor" name="3.1.1"></a>
@@ -139,7 +147,7 @@
 
 		  <a class="anchor" name="3.1.2"></a>
 	      <h3 id="Mac">3.1.2 - Mac</h3>
-		    <p>However, if you have the Mac OS installed on your machine, you will need to download and install <a href="http://www.mamp.info/en/mamp/‎" target="new">MAMP</a>. You can download the it free from <a href="http://mamp.info/en/downloads/" target="new">this page</a>. You will need to install this software on your machine before you can continue. Installation instructions can be found <a href="http://sawmac.com/mamp/" target="new">here</a>.</p>
+		    <p>If you have the Mac OS installed on your machine, you will need to download and install <a href="http://www.mamp.info/en/mamp/‎" target="new">MAMP</a>. You can download the it free from <a href="http://mamp.info/en/downloads/" target="new">this page</a>. You will need to install this software on your machine before you can continue. Installation instructions can be found <a href="http://sawmac.com/mamp/" target="new">here</a>.</p>
 			
 		  <a class="anchor" name="3.1.3"></a>			
 	      <h3 id="Linux">3.1.3 - Linux</h3>
@@ -159,7 +167,7 @@
 		  
 		  <a class="anchor" name="3.2.1"></a>
 	      <h3 id="Database Setup">3.2.1 - Database Setup</h3>
-		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL Administration program (for example, in the following pictures we will use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
+		    <p>AcidRain makes heavy use of MySQL databases for its functionality and data storage abilities. In addition to installing the AcidRain files in the root directory, you must also create a database structure on the same server for it to be able to work. Access your MySQL administration program (for example, in the following pictures we will use PHPMyAdmin), and create a database entitled <b>acid_rain</b>. (NOTE: It must be named exactly as such; the name is case-sensitive):</p>
             <p><img src="img/4.png" alt="Create acid_rain Database"/></p>
 			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database:</p>
 			<p><img src="img/5.png" alt="Import acid_rain.sql"/></p>
@@ -170,7 +178,7 @@
 	  <a class="anchor" name="4.0"></a>
 	  <h1 id="Using the System">4.0 - Using the System</h1>
 	  
-		<p>Once you have everything installed, you should be good to go. Open your browser and point your address to: "http://localhost/", and then navigate your way to the AcidRain root directory (For example, we use: "http://localhost/AcidRain/".</p>
+		<p>Once you have everything installed, you should be good to go. Open your browser and point your address to: "http://localhost/", and then navigate your way to the AcidRain root directory (For example, we use: "http://localhost/AcidRain/").</p>
 
         <a class="anchor" name="4.1"></a>
 	    <h2 id="Introductory Pages">4.1 - Introductory Pages</h2>
@@ -192,7 +200,7 @@
 		    <p><img src="img/9.png" alt="Documentation Page"/></p>
 			<p>The Documentation is what describes our project in detail. We intend it to be accessible for all users, from the skilled administrator to the average user. The Table of Contents is on the left:</p>
             <p><img src="img/10.png" alt="Table of Contents"/></p>
-			<p>It organizes all the data on this page to help you find what you are looking for quickly and easily. In order to go to a specified heading, click the link to view the page in the right hand side. If you don't wee what you are looking for in the Table of Contents, make sure you have scrolled completely to the bottom.</p>
+			<p>It organizes all the data on this page to help you find what you are looking for quickly and easily. In order to go to a specified heading, click the link to view the page in the right hand side. If you don't see what you are looking for in the Table of Contents, make sure you have scrolled completely to the bottom.</p>
             <p>In order to return to the main part of the program (the spreadsheet page), click the link below the Table of Contents entitled "Return to Chemical Database":</p>
 			<p><img src="img/11.png" alt="Home Page"/></p>
 			
@@ -200,62 +208,141 @@
 	      <h3 id="Logging In">4.1.3 - Logging In</h3>
 		  
 		    <p><img src="img/12.png" alt="Login on Navigation Bar"/></p>
-			<p>AcidRain does not allow anyone to view, add, or delete data, only authorized users. In order to view the data, you go to the Login page (Note: Attempts to access the Spreadsheet page without prior authorization will result in the user's browser being directed back to the Login page. Here is what you will see:</p>
+			<p>AcidRain only allows authorized users to view, add, or delete data. In order to view the data, go to the Login page (Note: Attempts to access the Spreadsheet page without prior authorization will result in the user's browser being directed back to the Login page. Here is what you will see:</p>
 		    <p><img src="img/13.png" alt="Login Page"/></p>
 			<p>Enter your password to login. Note the "Stay logged in" option. By default, it is checked, which means that AcidRain will place a cookie on your computer to remember that you are logged in the next time you visit this program, for added convenience. If you do not wish to have cookies stored on your computer and therefore wish to log in every time, uncheck the box:</p>
             <p><img src="img/14.png" alt="'Stay logged in' option"/></p>
 			<p>Once you enter the correct password, you will automatically be directed to the Spreadsheet Page.</p>
 			<p><b>Note for administrators:</b> In order to change the password, access the login.php file in the the AcidRain root directory on your server, edit it, and in the first few lines, change the code <code style="font-size: 150%; color: blue;">if( $_REQUEST["password"] == "testpassword" )</code>, replacing the string in quotes at the end with whatever you wish to be your password:</p>
 			<p><img src="img/15.png" alt="Change PHP Code"/></p>
+			
+        <a class="anchor" name="4.2"></a>
+	    <h2 id="The Spreadsheet Page">4.2 - The Spreadsheet Page</h2>
+		
+		  <p>This page is the heart of AcidRain. It is where you can view the data, sort the data, and the starting place from where you can add more data or delete data. It is your "control panel," or "administrator board."</p>
+		  <p><img src="img/16.png" alt="The Spreadsheet Page"/></p>
+		  <p>Here you find the ability to view your data in one quick, easy manner. Ability to work with the data is covered in later headings. Again, note that attempted to access this page without prior authorization will result in redirection back to the login page.</p>
+		  <p><img src="img/17.png" alt="Spreadsheet Address"/></p>
+
+		<a class="anchor" name="4.3"></a>
+	    <h2 id="Searching Data">4.3 - Searching Data</h2>
+		
+		  <p>The current version of AcidRain does not have the ability to search the spreadsheet for data yet. However, you can still use your browser to search the page for a chemical, room, size, or something else that you may be looking for. Most browsers give you the keyboard short cut of Ctrl+F to search for data.</p>
+		  <p><img src="img/18.png" alt="The Search Bar"/></p>
+		  <p>Another way to find the data you are looking for is by sorting the data. You can read more about this on our <a href="#4.7">Sorting Data</a> page. For example, if wanted to find "Sodium", you might sort the data alphabetically and then look in the "S" section.</p>
+
+	    <a class="anchor" name="4.4"></a>
+	    <h2 id="Adding Data">4.4 - Adding Data</h2>
+		
+		  <p>In order to add chemical entries, you will need to go to the "Add Data" page.</p>
+		  <p><img src="img/26.png" alt="'Add Data' Page"/></p>
+		  <p>You will need to fill out the following fields:</p>
+		  <ul>
+		    <li><b>Manufacturer:</b> You will write in the field the name of the manufacturer that supplied you with the chemical. (Example: Sigma-Aldrich).</li>
+		    <li><b>Chemical:</b> This is the actual name of the chemical. Try to avoid spelling errors and variations. (Example: Sucrose).</li>
+		    <li><b>Room:</b> The room number in which the chemical is stored. This should be an number, with any additional distinguishing characters such as letters or symbols following. (Example: 25A).</li>
+		    <li><b>Location:</b> This is the more specific location in the room previously specified where the chemicals reside. (Example: Cabinet Top Shelf).</li>
+		    <li><b>Quantity:</b> This is the amount of units of the chemical that are currently available. (Example: 50).</li>
+		    <li><b>Unit Size:</b> This differs from Quantity in that this measures the size of each <b>individual unit</b> in the entire package. (Example: 10).</li>
+		    <li><b>Unit of Measure:</b> This is the unit used to measure the individual size of each unit. Use abbreviations -- "ml" for "milliliter," "lb" for "pound," etc. (Example: ml).</li>
+		  </ul>
+		  <p>Again, attempts must be made on your part to ensure that the data has integrity -- that it is spelled correctly, is accurate, and so forth. When you are done, click the "Add Data" button to complete your task.</p>
+		  <p><img src="img/27.png" alt="Adding a Data Entry"/></p>
 		  
+		<a class="anchor" name="4.5"></a>
+	    <h2 id="Deleting Data">4.5 - Deleting Data</h2>
+		
+		  <p>In order to remove data from the spreadsheet, click the "Delete Records" button at the bottom of the page:</p>
+		  <p><img src="img/19.png" alt="Delete Records Button"/></p>
+		  <p>This action should result in check-boxes appearing by the side of each chemical entry. To remove an entry from the spreadsheet, and thus from the entire database, check the boxes corresponding to each chemical entry you wish to delete and then click the "Delete Records" button at the bottom of the page.</p>
+		  <p><img src="img/20.png" alt="Deleting Selected Records"/></p>
+		  <p><img src="img/21.png" alt="After Deletion"/></p>
+		  <p>After performing this process, the deleted records cannot be recovered. Refresh the page to go back to the main spreadsheet view.</p>
+		  
+		<a class="anchor" name="4.6"></a>
+	    <h2 id="Modifying Data">4.6 - Modifying Data</h2>
+		
+		  <p>The current version of AcidRain does not give the user the ability to directly modify any one data entry; however, the user may modify an entry by <a href="#4.5">deleting</a> it and then <a href="#4.4">re-adding</a> it with the new changes.</p>
+		  <p>Alternatively, we invite the advanced user to visit the <a href="#5.0">Advanced</a> page for more information on manual manipulation of the database and its entries.</p>
+		  
+		<a class="anchor" name="4.7"></a>
+	    <h2 id="Sorting Data">4.7 - Sorting Data</h2>
+		
+		  <p>AcidRain allows the user to dynamically sort the data on the main spreadsheet page. By default, the chemical records are sorted alphabetically by the names of the chemicals. Note that the header of the column that is currently controlling the order in which the data is sorted is a darker shade than the other columns headers:</p>
+		  <p><img src="img/22.png" alt="Sorted by Darkened Header"/></p>
+		  <p>In order to change which column determines the sorting order, simply click on the desired column header.</p>
+		  <p><img src="img/23.png" alt="Ascending Sort Order"/></p>
+		  <p>Note that the change indicated in the previous picture sorted the data based on the "Room" column <b>in ascending order</b>. In order to sort the column <b>in descending order</b>, simply click the header again. This applies to all the other columns as well.</p>
+		  <p><img src="img/24.png" alt="Descending Sort Order"/></p>
+		  <p>Note that the arrows to the right of the name in each column header indicate how that header affects sorting. If there is an up arrow beside the active column, than the data is sorted in descending order. If there is a down arrow, then it is sorted in ascending order. Inactive columns display both arrows present.</p>
+		  
+		<a class="anchor" name="4.8"></a>
+	    <h2 id="Concluding Pages">4.8 - Concluding Pages</h2>
+		
+		  <a class="anchor" name="4.8.1"></a>
+	      <h3 id="Logging Out">4.8.1 - Logging Out</h3>
+		  
+		    <p><img src="img/25.png" alt="Logout on Navigation Bar"/></p>
+			<p>To log out of your access to the spreadsheet view, simply click the "Logout" link on the navigation bar. This will bring you back to the Home Page.</p>
+
 	  <a class="anchor" name="5.0"></a>
 	  <h1 id="Advanced">5.0 - Advanced</h1>
 	  
-		<p>This is version two of Gila, a revision of the
-		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
-          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
-          in February 2003. Following is a summary of the major differences between this version and the
-          original.</p>
+		<p>This section is intended for an advanced user such as an administrator or someone trained in computer skills. If you are not this type of person, please use the Graphical Interface this program presents.</p>
 
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+		<a class="anchor" name="5.1"></a>
+	    <h2 id="Database Administration">5.1 - Database Administration</h2>
+		
+	      <p>To the administrator, there are some ways in which directly and manually manipulating the AcidRain database will be easier and more efficient than using its Graphical Interface. This section assumes you know how to use whatever tools your AMP system provides you for editing databases, and gives you the structure and layout of the database itself so you will know how it interacts with itself.</p>
+		  <p><img src="img/28.png" alt="The 'acid_rain' Database"/></p>
+		  <p>The <b>acid_rain</b> database, which AcidRain uses, is composed of three tables, the <b>chemical</b> table, the <b>inventory</b> table, and the <b>manufacturer</b> table. We will look at each one.</p>
+		  
+		  <a class="anchor" name="5.1.1"></a>
+	      <h3 id="The Chemical Table">5.1.1 - The Chemical Table</h3>
+		  
+		    <p><img src="img/29.png" alt="The 'chemical' Table"/></p>
+			<p>The <b>chemical</b> table stores all the distinct chemicals that are represented in the entire AcidRain spreadsheet. It is composed of the following columns:</p>
+			<ul>
+		      <li><b>ID:</b> This is simply the unique identifier of each chemical stored in this table.</li>
+		      <li><b>MfrProdID:</b> This is the identification number given to the particular product by the manufacturers themselves.</li>
+		      <li><b>Name:</b> The actual name of the chemical.</li>
+		      <li><b>MfrID:</b> This is the foreign key that links each chemical to a manufacturer listed in the <b>manufacturer</b> table.</li>
+		    </ul>
+			
+		  <a class="anchor" name="5.1.2"></a>
+	      <h3 id="The Inventory Table">5.1.2 - The Inventory Table</h3>
+		  
+		    <p><img src="img/30.png" alt="The 'inventory' Table"/></p>
+			<p>The <b>inventory</b> table stores all the actual entries that are made to the AcidRain spreadsheet. It is what is literally represented by our spreadsheet. It has the following columns:</p>
+			<ul>
+		      <li><b>ID:</b> This is simply the unique identifier of each entry stored in this table.</li>
+		      <li><b>Room:</b> This documents the room number in the EMU Science Center where this entry is stored.</li>
+		      <li><b>Location:</b> This is the more specific location inside of the room where the entry is stored.</li>
+		      <li><b>ItemCount:</b> The number of units this entry has.</li>
+			  <li><b>ChemicalID:</b> This is the foreign key that links this entry to a chemical in the <b>chemical</b> table.</li>
+		      <li><b>Size:</b> This is the size of each individual unit.</li>
+		      <li><b>Units:</b> This is the amount of total units in the package represented by this entry.</li>
+		      <li><b>MfrID:</b> This is the the date this entry was last updated.</li>
+		    </ul>
+			
+		  <a class="anchor" name="5.1.3"></a>
+	      <h3 id="The Manufacturer Table">5.1.3 - The Manufacturer Table</h3>
+		  
+		    <p><img src="img/31.png" alt="The 'manufacturer' Table"/></p>
+			<p>The <b>manufacturer</b> table stores all the distinct manufacturers that are represented in the entire AcidRain spreadsheet. It is composed of the following columns:</p>
+			<ul>
+		      <li><b>ID:</b> This is simply the unique identifier of each manufacturer stored in this table.</li>
+		      <li><b>Name:</b> This is actual name of the manufacturer.</li>
+		      <li><b>Website:</b> The URL to the manufacturer's website.</li>
+		      <li><b>MSDSBaseURL:</b> The base URL to gain access to the manufacturers MSDS sheets.</li>
+		      <li><b>MSDSSearchInfo:</b> Other info allowing us to search the manufacturers MSDS sheets.</li>
+		    </ul>
 		  
 	  <a class="anchor" name="6.0"></a>
 	  <h1 id="Other">6.0 - Other</h1>
 	  
-		<p>This is version two of Gila, a revision of the
-		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
-          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
-          in February 2003. Following is a summary of the major differences between this version and the
-          original.</p>
-
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
+		<p>We are appreciative to the EMU Science Department for allowing us to work with them, especially Jon Spicher; we are grateful to our instructor, Charles Cooley, for his initiation, help and advice before and throughout the project, as well as our student colleagues in Software Engineering who reviewed our project and helped us improve. We were also greatly helped by the use of <a href="github.com">GitHub</a> as a version control system for our project, as well as to the contributions of PHP, MySQL, and Apache.</p>
 		  
-	  <a class="anchor" name="7.0"></a>
-	  <h1 id="About">7.0 - About</h1>
-	  
-		<p>This is version two of Gila, a revision of the
-		  <a href="http://www.oswd.org/userinfo.phtml?user=haran">original design</a> I submitted
-          to <a href="http://www.oswd.org"><acronym title="Open Source Web Design">OSWD</acronym></a>
-          in February 2003. Following is a summary of the major differences between this version and the
-          original.</p>
-
-        <p>Gila was inspired by the homepage of <a href="http://www.activestate.com">ActiveState</a>, an
-          open-source application development company. The name
-          <span class="titleTip" title="Gila monster: a species of lizard">Gila</span> is a play on the
-          word <span class="titleTip" title="Komodo dragon: another species of lizard">Komodo</span>,
-          the name of one of ActiveState&rsquo;s products which is based on
-          <a href="http://www.mozilla.org">the Mozilla project</a>.</p>
-
 	  <div id="footer">
       <div>
         Copyright &copy; 2013, Stephan Quenzer, Isaac Tice, and Josiah Driver | Modified December 2013 by <a href="mailto:josiah.driver@emu.edu" title="Email">Josiah Driver</a>
