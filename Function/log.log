@@ -30,3 +30,6 @@
 12/05/13 22:49:47 :   Unknown column 'Manufacturer.name' in 'field list'
 12/06/13 02:01:59 :   PROCEDURE Find_Manufacturer already exists
 12/06/13 02:04:02 :   PROCEDURE Find_Manufacturer already exists
+12/06/13 19:14:33 :   Unknown column 'Manufacturer.name' in 'field list'
+12/06/13 19:16:06 :   Unknown column 'Manufacturer.name' in 'field list'
+12/06/13 19:18:25 :   Unknown column 'Manufacturer.name' in 'field list'
