@@ -108,11 +108,11 @@ if( isset($_REQUEST['callback'])){
 		                    $closest  = $man;
 		                    $shortest = $lev;
 	                        }
-	                    }*/
+	                    }
                             
                 }else
                     slog($db->error);
-            }
+            }*/
 
             break;    
         case "simErr":
