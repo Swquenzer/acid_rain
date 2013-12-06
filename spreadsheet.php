@@ -65,7 +65,8 @@ if( !isset( $_SESSION["loggedIn"] ) )
 						<th scope="col" id="th_left">Room</th>
 						<th scope="col">Location</th>
 						<th scope="col">Name</th>
-						<th scope="col" id="th_right">Amount</th>
+						<th scope="col">Amount</th>
+                        <th scope="col" id="th_right">Manufacturer</th>
 					</tr>
 				</thead>
 				<tbody id="chemical_spreadsheet_body">

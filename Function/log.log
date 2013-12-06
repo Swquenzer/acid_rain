@@ -30,3 +30,15 @@
 12/05/13 22:49:47 :   Unknown column 'Manufacturer.name' in 'field list'
 12/06/13 02:01:59 :   PROCEDURE Find_Manufacturer already exists
 12/06/13 02:04:02 :   PROCEDURE Find_Manufacturer already exists
+12/06/13 14:26:50 :   test
+12/06/13 14:26:50 :   this far
+12/06/13 14:26:50 :   Query did not execute successfully: 
+12/06/13 14:26:50 :   Successful
+12/06/13 14:27:45 :   test
+12/06/13 14:27:45 :   this far
+12/06/13 14:27:46 :   Query did not execute successfully: Column 'ID' in field list is ambiguous
+12/06/13 14:27:46 :   Successful
+12/06/13 14:32:01 :   test
+12/06/13 14:32:01 :   this far
+12/06/13 14:32:01 :   Query did not execute successfully: Column 'ID' in field list is ambiguous
+12/06/13 14:32:01 :   Successful

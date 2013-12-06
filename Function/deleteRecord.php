@@ -5,11 +5,10 @@ if(isset($_POST['location'])) {
 		slog('In deleteRecord.php: Error including dblogin file');
 	}
 slog("test");
-	$query = "SELECT * FROM inventory WHERE Location = ? AND ID = ? AND Size = ?;"; // WHERE something (?, ?, ?) ';
+	$query = 'CALL DelInventory(?,?,?,?)'; // WHERE something (?, ?, ?) ';
 	$delete = $db->prepare($query);
-	settype( $_POST['amount'], int );
-	slog($_POST['location'] . $_POST['name'] . settype($_POST['amount']);
-	$delete->bind_param('ssi', $_POST['location'], $_POST['name'], $_POST['amount']);
+	settype( $_POST['amount'], 'int' );
+	$delete->bind_param('ssis', $_POST['location'], $_POST['name'], $_POST['amount'], $_['manufacturer'] );
 	
 	slog("this far" . $db->error);
 	##Not getting through to this line

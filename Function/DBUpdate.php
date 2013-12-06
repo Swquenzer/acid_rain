@@ -3,11 +3,11 @@
 
 $names[0] ='Get_Spreadsheet';
 $queries[0] = <<<'EOD'
-CREATE PROCEDURE `Get_Spreadsheet`() 
+CREATE DEFINER=`devAdmin`@`%` PROCEDURE `Get_Spreadsheet`()
 BEGIN 
-SELECT `inventory`.`Room`, `inventory`.`Location`, `chemical`.`Name`, `inventory`.`Size`, `inventory`.`Units` 
-FROM `inventory` LEFT JOIN `chemical` ON `inventory`.`ChemicalID` = `chemical`.`ID`; 
-END 
+SELECT `inventory`.`Room`, `inventory`.`Location`, `chemical`.`Name`, `inventory`.`Size`, `inventory`.`Units`, `manufacturer`.`Name` AS mfr
+FROM `inventory` LEFT JOIN (`chemical` LEFT JOIN `manufacturer` ON `chemical`.`MfrID`= `manufacturer`.`ID`) ON `inventory`.`ChemicalID` = `chemical`.`ID`; 
+END
 EOD;
 
 $names[1] ='Add_Inventory_Preload';
@@ -35,6 +35,16 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Manufacturer`()
 BEGIN
 SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS ManufacturerName
 FROM `manufacturer`;
+END
+EOD;
+
+$names[4] = 'DelInventory';
+$queries[4] = <<<'EOD'
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DelInventory`(location varchar(45), chemical varchar(45), amount smallint(255), mfr varchar(60))
+BEGIN
+SELECT ID 
+FROM `inventory`LEFT JOIN (`chemical` LEFT JOIN `manufacturer` on `chemical`.`MfrID`= `manufacturer`.`ID`) on `inventory`.`ChemicalID` = `chemical`.`ID`
+WHERE `inventory`.`Location`= location AND `chemical`.`Name`= chemical AND `inventory`.`Size`= ammount AND `manufacturer`.`Name`=mfr;
 END
 EOD;
 /*

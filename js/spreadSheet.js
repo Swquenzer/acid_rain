@@ -28,7 +28,7 @@ function returnTable(recSet) {
     }
     for (var i = 0; i < recSet.length; i++) {
         var record = recSet[i];
-        var contents = [record.Room, record.Location, record.Name, record.Size + " " + record.Units];
+        var contents = [record.Room, record.Location, record.Name, record.Size + " " + record.Units, record.mfr];
         tr = makeTableRow(contents);
         tbody.appendChild(tr);
     }
@@ -97,7 +97,7 @@ var ajax_caller = function(record) {
 	$.ajax({
 		type: 'POST',
 		url: 'function/deleteRecord.php',
-		data: {'location': record[0], 'name': record[1], 'amount': record[2]},
+		data: {'location': record[0], 'name': record[1], 'amount': record[2], 'manufacturer':[3]},
 		success: function() {
 			//alert("Success");
 		},
