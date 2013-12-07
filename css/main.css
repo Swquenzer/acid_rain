@@ -115,6 +115,7 @@ header #navMenu a:hover {
 /* CHEMICAL SPREADSHEET STYLES */
 #chemical_spreadsheet {
 	margin: auto;
+	margin-bottom: 10px;
 	width: 700px;
 	border-collapse: collapse;
 }

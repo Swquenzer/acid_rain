@@ -46,7 +46,7 @@ if( isset($_REQUEST['callback'])){
             if(!$stmt == false){
 			    $numRecs = $stmt->num_rows;
                 for($i=0; $i < $numRecs ; $i++){
-					$rslt[] = $stmt->fetch_array($resulttype= MYSQLI_ASSOC);
+					$rslt[] = $stmt->fetch_array();
 					if ($rslt[$i] == null){
 						unset($rslt[$i]);
 						break;
@@ -123,7 +123,56 @@ if( isset($_REQUEST['callback'])){
 			break;
 		
 	}
+	
 //$db->close();
 }
-
+if(isset($_POST['submit'])) {
+        require('logger.php');
+        require('../admin/AcidRainDBLogin.php');
+        #Get chemical id ( need to create better query with join later )
+        $query = $db->prepare("SELECT ID FROM chemical WHERE Name=?");
+        var_dump($query);
+        $query->bind_param('s', $_POST['chemical']);
+        $query->execute(); //necessary?
+        $result = $query->get_result(); //Error Checking Needed
+        $result = $result->fetch_array(MYSQLI_BOTH);
+        $chemID = $result[0];
+        $query->close();
+        #Insert record
+        $query = $db->prepare("INSERT INTO inventory (Room, Location, ItemCount, ChemicalID, Size, Units, LastUpdated)
+                                                VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $currentDate = date("Y-m-d H:i:s");
+        echo '<br><br>';
+        var_dump($_POST);
+        $_POST['quant'] = (int) $_POST['quant'];
+        $_POST['unitSize'] = (int) $_POST['unitSize'];
+        echo '<br><br>';
+        var_dump($_POST);
+        echo '<br><br>';
+        var_dump($chemID);
+        $query->bind_param('ssiiiss', $_POST['room'], $_POST['location'], $_POST['quant'], $chemID, $_POST['unitSize'], $_POST['unit'], $currentDate);
+        if(!$query->execute()) {
+                slog('problem executing query in tbl.php: ' . $db->error);
+        }
+        /*
+        $stmt = $db->query("CALL Get_Manufacturer()");
+        $manList = $stmt->fetch_array(MYSQLI_BOTH); //BOTH is temporary
+        printf("$result[0]: %s\n", $result[0]); //test
+        printf("$result[1]: %s\n", $result[1]); //test
+        //$manRank[$manList.length];
+        $shortest = -1;
+        foreach($manList as $man) {
+                $lev = levenshtein($_POST['manufacturer'], $man);
+                if($lev == 0) {
+                        slog('IN');
+                }
+                if ($lev <= $shortest || $shortest < 0) {
+                // set the closest match, and shortest distance
+                $closest = $man;
+                $shortest = $lev;
+         }
+        }
+        #$closest contains the best match
+        */
+}
 ?>

@@ -179,7 +179,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 				</tbody>
 			</table>
 			<!-- display=none if delete is set -->
-			<form class="inputField" type="link" action="addInventory.php">
+			<form class="inputField" action="addInventory.php">
 				<fieldset>
 					<p><span class="inputFieldCenter">
 						<label for="submit">Add chemical records: </label>
