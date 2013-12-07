@@ -227,3 +227,12 @@ p {
 .activePage {
 	color: black !important;
 }
+.errMsg {
+        display: block;
+        width: 90%;
+        color: red;
+        margin: auto;
+        padding: none;
+        font-family: 'Oswald', sans-serif;
+        font-size: 13px;
+}

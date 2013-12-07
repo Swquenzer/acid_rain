@@ -138,23 +138,35 @@ if(isset($_POST['submit'])) {
         $result = $result->fetch_array(MYSQLI_BOTH);
         $chemID = $result[0];
         $query->close();
-        #Insert record
-        $query = $db->prepare("INSERT INTO inventory (Room, Location, ItemCount, ChemicalID, Size, Units, LastUpdated)
-                                                VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $currentDate = date("Y-m-d H:i:s");
-        echo '<br><br>';
-        var_dump($_POST);
-        $_POST['quant'] = (int) $_POST['quant'];
-        $_POST['unitSize'] = (int) $_POST['unitSize'];
-        echo '<br><br>';
-        var_dump($_POST);
-        echo '<br><br>';
-        var_dump($chemID);
-        $query->bind_param('ssiiiss', $_POST['room'], $_POST['location'], $_POST['quant'], $chemID, $_POST['unitSize'], $_POST['unit'], $currentDate);
-        if(!$query->execute()) {
-                slog('problem executing query in tbl.php: ' . $db->error);
-        }
-        /*
+		#Validate
+		require 'validate.php';
+		$errors = validateAddInventory($_POST['room'], $_POST['quant'], $chemID, $_POST['unitSize'], $_POST['unit']);
+		if(empty($errors)) {
+			#Insert record
+			$query = $db->prepare("INSERT INTO inventory (Room, Location, ItemCount, ChemicalID, Size, Units, LastUpdated)
+													VALUES (?, ?, ?, ?, ?, ?, ?)");
+			$currentDate = date("Y-m-d H:i:s");
+			echo '<br><br>';
+			var_dump($_POST);
+			$_POST['quant'] = (int) $_POST['quant'];
+			$_POST['unitSize'] = (int) $_POST['unitSize'];
+			echo '<br><br>';
+			var_dump($_POST);
+			echo '<br><br>';
+			var_dump($chemID);
+			$query->bind_param('ssiiiss', $_POST['room'], $_POST['location'], $_POST['quant'], $chemID, $_POST['unitSize'], $_POST['unit'], $currentDate);
+			if(!$query->execute()) {
+					slog('problem executing query in tbl.php: ' . $db->error);
+			}
+		} else {
+			echo "<h1>Errors: </h1><span class='errMsg'><ul>";
+			foreach($errors as $e) {
+					echo "<li>$e</li>";
+			}
+			echo "</ul></span>";
+		}
+		
+        /* ### Levenshtein function for later if we have time
         $stmt = $db->query("CALL Get_Manufacturer()");
         $manList = $stmt->fetch_array(MYSQLI_BOTH); //BOTH is temporary
         printf("$result[0]: %s\n", $result[0]); //test
