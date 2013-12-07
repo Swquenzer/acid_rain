@@ -50,7 +50,7 @@ if( isset($_REQUEST['callback'])){
 					if ($rslt[$i] == null){
 						unset($rslt[$i]);
 						break;
-					}                       
+					}
 				}
 				
 				$stmt->close();
