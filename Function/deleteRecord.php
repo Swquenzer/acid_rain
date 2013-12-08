@@ -1,24 +1,23 @@
 <?php 
 include 'logger.php';
+
 if(isset($_POST['location'])) {
 	if(!include "../admin/AcidRainDBLogin.php") {
 		slog('In deleteRecord.php: Error including dblogin file');
 	}
-slog("test");
-	$query = "SELECT * FROM inventory WHERE Location = ? AND ID = ? AND Size = ?;"; // WHERE something (?, ?, ?) ';
-	$delete = $db->prepare($query);
-	settype( $_POST['amount'], int );
-	slog($_POST['location'] . $_POST['name'] . settype($_POST['amount']);
-	$delete->bind_param('ssi', $_POST['location'], $_POST['name'], $_POST['amount']);
 	
-	slog("this far" . $db->error);
-	##Not getting through to this line
+	# ----------- QUICKFIX for delete --------------#
+	$query = "DELETE FROM inventory WHERE Location = ? AND Size = ? AND ChemicalID IN (SELECT ID FROM chemical WHERE Name = ?)";
+	$delete = $db->prepare($query);
+	$_POST['amount'] = (int) $_POST['amount'];	
+	$delete->bind_param('sis', $_POST['location'], $_POST['amount'], $_POST['name']);
+
+	# ----------- END QUICKFIX ---------------------#
+	
 	if(!$delete->execute()) {
 		slog('Query did not execute successfully: ' . $db->error);
 	}
 	$delete->close();
-	
-	slog("Successful");
 }
 
 ?>

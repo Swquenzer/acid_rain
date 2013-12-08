@@ -50,6 +50,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 	</header>
 	<div id="wrapper">
 		<section id="main">
+			<!------- UNFUNCTONAL SEARCH BAR -----------
 			<form class="inputField" action="" method="post">
 				<fieldset>
 					<p><span class="inputFieldCenter">
@@ -59,6 +60,7 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					</span></p>
 				</fieldset>
 			</form>
+			------------- END SEARCH BAR -------------->
 			<table id="chemical_spreadsheet" class="tablesorter">
 				<thead>
 					<tr>
