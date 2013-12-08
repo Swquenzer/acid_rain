@@ -87,6 +87,7 @@ function createForm(main) {
 	$('#main').wrapInner("<form id='deleteForm' class='inputField'></form>");
 	$('#main').prepend("<h1>Delete records</h1>");
 	$('#deleteForm').append("<input type='button' id='submitDelete' value='Delete Records' onClick='processDelete()'>");
+    $('#deleteForm').append("<input type='button' id='refresh' value='Back to Spreadsheet View' onClick='location.reload()'>");
 }
 
 function deleteForm(formClass) {
