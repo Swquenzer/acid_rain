@@ -46,11 +46,11 @@ if( isset($_REQUEST['callback'])){
             if(!$stmt == false){
 			    $numRecs = $stmt->num_rows;
                 for($i=0; $i < $numRecs ; $i++){
-					$rslt[] = $stmt->fetch_array($resulttype= MYSQLI_ASSOC);
+					$rslt[] = $stmt->fetch_array();
 					if ($rslt[$i] == null){
 						unset($rslt[$i]);
 						break;
-					}                       
+					}
 				}
 				
 				$stmt->close();
@@ -123,7 +123,7 @@ if( isset($_REQUEST['callback'])){
 			break;
 		
 	}
+	
 //$db->close();
 }
-
 ?>
