@@ -105,7 +105,7 @@ $message = "";
 							{
 								$query->close();
 								$query = $db->prepare("INSERT INTO chemical (Name, MfrID) VALUES (?, ?)");
-								$query->bind_param('ss', $_POST['manufacturer'], $manufacturerID);
+								$query->bind_param('ss', $_POST['chemical'], $manufacturerID);
 								if( !$query->execute() )
 									slog($query->error);
 							
