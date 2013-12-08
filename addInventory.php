@@ -11,6 +11,8 @@ if( !isset( $_SESSION["loggedIn"] ) )
 {
     header( "Location: login.php" );
 }
+
+$message = "";
 ?>
 <!doctype html>
 <html lang="en">
@@ -59,18 +61,67 @@ if( !isset( $_SESSION["loggedIn"] ) )
 					if(isset($_POST['submit'])) {
 						require('function/logger.php');
 						require('admin/AcidRainDBLogin.php');
-						#Get chemical id ( need to create better query with join later )
-						$query = $db->prepare("SELECT ID FROM chemical WHERE Name=?");
-						$query->bind_param('s', $_POST['chemical']);
-						$query->execute(); //necessary?
-						$result = $query->get_result(); //Error Checking Needed
-						$result = $result->fetch_array(MYSQLI_BOTH);
-						$chemID = $result[0];
-						$query->close();
+						
 						#Validate
-						require 'function/validate.php';
-						$errors = validateAddInventory($_POST['room'], $_POST['quant'], $chemID, $_POST['unitSize'], $_POST['unit']);
+						require('function/validate.php');
+						$errors = validateAddInventory($_POST['room'], $_POST['quant'], 0 /* No need for $chemID with Quick_fix */, $_POST['unitSize'], $_POST['unit']);
+						
 						if(empty($errors)) {
+						
+							#Get chemical id ( need to create better query with join later )
+						
+							#----- QUICKFIX:add manufacturer, chemical if not present ----#
+							$query = $db->prepare("SELECT ID FROM 	manufacturer WHERE Name=?");
+							$query->bind_param('s', $_POST['manufacturer']);
+							$query->execute();
+							$query->store_result();
+							#If manufacturer not in database insert it
+							if($query->num_rows() < 1 )
+							{
+								$query->close();
+								$query = $db->prepare("INSERT INTO manufacturer (Name) VALUES (?)");
+								$query->bind_param('s', $_POST['manufacturer']);
+								if( !$query->execute() )
+									slog($query->error);
+							
+								$query->close();
+								
+								#Now fetch manufacturer ID 
+								$query = $db->prepare("SELECT ID FROM manufacturer WHERE Name=?");
+								$query->bind_param('s', $_POST['manufacturer']);
+								$query->execute();
+							}
+							$query->bind_result($manufacturerID);
+							$query->fetch();
+							$query->close();
+						
+							#Now, if chemical not in database insert it
+							$query = $db->prepare("SELECT ID FROM chemical WHERE Name=?");
+							$query->bind_param('s', $_POST['chemical']);
+							$query->execute();
+							$query->store_result();
+							#If chemical not in database insert it
+							if($query->num_rows() < 1 )
+							{
+								$query->close();
+								$query = $db->prepare("INSERT INTO chemical (Name, MfrID) VALUES (?, ?)");
+								$query->bind_param('ss', $_POST['manufacturer'], $manufacturerID);
+								if( !$query->execute() )
+									slog($query->error);
+							
+								$query->close();
+								
+								#Now fetch chemical ID 
+								$query = $db->prepare("SELECT ID FROM chemical WHERE Name=?");
+								$query->bind_param('s', $_POST['chemical']);
+								$query->execute();
+							}
+							$query->bind_result($chemID);
+							$query->fetch();
+							$query->close();
+						
+							#----------------------- END OF QUICK FIX --------------------#
+						
 							#Insert record
 							$query = $db->prepare("INSERT INTO inventory (Room, Location, ItemCount, ChemicalID, Size, Units, LastUpdated) VALUES (?, ?, ?, ?, ?, ?, ?)");
 							$currentDate = date("Y-m-d H:i:s");
@@ -80,9 +131,13 @@ if( !isset( $_SESSION["loggedIn"] ) )
 							if(!$query->execute()) {
 									slog('problem executing query in tbl.php: ' . $db->error);
 							}
+							
+							else
+							    $message = "Your record has been added.";
 						}
 					}
 				?>
+				<p style="text-align: center;"><?php echo $message; ?></p>
 				<form class="inputField" id="addInv" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"><fieldset>
 						<?php
 							if(!empty($errors)) {
@@ -134,12 +189,6 @@ if( !isset( $_SESSION["loggedIn"] ) )
         <footer>
         <span id="footerContent">
         <a href="http://www.emu.edu"><img src="gfx/emu.png" width="200px" height="80px"></a>
-        <ul>
-                <li><a href="#">Link 1</a></li>
-                <li> &nbsp; | &nbsp; <a href="#">Link 2</a></li>
-                <li> &nbsp; | &nbsp; <a href="#">Link 3</a></li>
-                <li> &nbsp; | &nbsp; <a href="#">Link 4</a></li>
-        </ul>
         </span>
         </footer>
         <div id="dialog-confirm" title="Suggested Manufacturers">
