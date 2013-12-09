@@ -29,7 +29,7 @@ function addInventoryLoad(recSet) {
 	var manUnique = manArray.reverse().filter(function (e, i, manArray) {
 		return manArray.indexOf(e, i+1) === -1;
 		}).reverse();
-	var chemUnique = roomArray.reverse().filter(function (e, i, chemArray) {
+	var chemUnique = chemArray.reverse().filter(function (e, i, chemArray) {
 		return chemArray.indexOf(e, i+1) === -1;
 		}).reverse();
 	var roomUnique = roomArray.reverse().filter(function (e, i, roomArray) {
