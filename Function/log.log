@@ -42,3 +42,85 @@
 12/06/13 14:32:01 :   this far
 12/06/13 14:32:01 :   Query did not execute successfully: Column 'ID' in field list is ambiguous
 12/06/13 14:32:01 :   Successful
+12/08/13 12:59:34 :   test
+12/08/13 12:59:34 :   this far
+12/08/13 12:59:34 :   Query did not execute successfully: Column 'ID' in field list is ambiguous
+12/08/13 12:59:34 :   Successful
+12/08/13 12:59:46 :   test
+12/08/13 12:59:46 :   this far
+12/08/13 12:59:46 :   Query did not execute successfully: Column 'ID' in field list is ambiguous
+12/08/13 12:59:46 :   Successful
+12/08/13 13:02:21 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN (`chemical` LEFT JOIN `manufacturer` on `chemical`.`MfrID`= `manufactu' at line 3
+12/08/13 13:02:27 :   test
+12/08/13 13:02:27 :   this far
+12/08/13 13:02:27 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/08/13 13:02:27 :   Successful
+12/08/13 13:05:34 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN (`chemical` LEFT JOIN `manufacturer` on `chemical`.`MfrID`= `manufactu' at line 3
+12/08/13 13:07:37 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN (`chemical` LEFT JOIN `manufacturer` on `chemical`.`MfrID`= `manufactu' at line 3
+12/08/13 13:07:45 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN `chemical` LEFT JOIN `manufacturer` on `chemical`.`MfrID`= `manufactur' at line 3
+12/08/13 13:11:03 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN `chemical`on `inventory`.`ChemicalID` = `chemical`.`ID` LEFT JOIN `man' at line 3
+12/08/13 13:13:38 :   test
+12/08/13 13:13:38 :   this far
+12/08/13 13:13:38 :   Query did not execute successfully: Unknown column 'ammount' in 'where clause'
+12/08/13 13:13:38 :   Successful
+12/08/13 13:14:10 :   test
+12/08/13 13:14:10 :   this far
+12/08/13 13:14:10 :   Successful
+12/08/13 13:17:26 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';);
+END' at line 5
+12/08/13 13:17:32 :   test
+12/08/13 13:17:32 :   this far
+12/08/13 13:17:32 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/08/13 13:17:32 :   Successful
+12/08/13 13:17:45 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';);
+END' at line 5
+12/08/13 13:17:46 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';);
+END' at line 5
+12/08/13 13:18:19 :   test
+12/08/13 13:18:19 :   this far
+12/08/13 13:18:19 :   Query did not execute successfully: You can't specify target table 'inventory' for update in FROM clause
+12/08/13 13:18:19 :   Successful
+12/08/13 13:28:45 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN `chemical`on `inventory`.`ChemicalID` = `chemical`.`ID` LEFT JOIN `man' at line 3
+12/08/13 13:28:49 :   test
+12/08/13 13:28:49 :   this far
+12/08/13 13:28:49 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/08/13 13:28:49 :   Successful
+12/08/13 13:29:02 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN `chemical`on `inventory`.`ChemicalID` = `chemical`.`ID` LEFT JOIN `man' at line 3
+12/08/13 13:29:08 :   test
+12/08/13 13:29:08 :   this far
+12/08/13 13:29:08 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/08/13 13:29:08 :   Successful
+12/08/13 13:33:44 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN `chemical`on `inventory`.`ChemicalID` = `chemical`.`ID` LEFT JOIN `man' at line 3
+12/08/13 13:33:49 :   test
+12/08/13 13:33:49 :   this far
+12/08/13 13:33:49 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/08/13 13:33:49 :   Successful
+12/08/13 13:34:02 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN `chemical`on `inventory`.`ChemicalID` = `chemical`.`ID` LEFT JOIN `man' at line 3
+12/09/13 12:11:20 :   test
+12/09/13 12:11:20 :   this far
+12/09/13 12:11:20 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/09/13 12:11:20 :   Successful
+12/09/13 12:18:59 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN
+chemical ON inventory.ChemicalID = chemical.ID INNER JOIN
+manufactu' at line 3
+12/09/13 12:19:00 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN
+chemical ON inventory.ChemicalID = chemical.ID INNER JOIN
+manufactu' at line 3
+12/09/13 12:19:09 :   test
+12/09/13 12:19:09 :   this far
+12/09/13 12:19:09 :   Query did not execute successfully: PROCEDURE acid_rain.DelInventory does not exist
+12/09/13 12:19:09 :   Successful
+12/09/13 12:20:03 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN
+chemical ON inventory.ChemicalID = chemical.ID INNER JOIN
+manufactu' at line 3
+12/09/13 12:28:04 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DelInventory`(locatio' at line 1
+12/09/13 12:28:14 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DelInventory`(locatio' at line 1
+12/09/13 12:29:18 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DelInventory`(locatio' at line 1
+12/09/13 12:31:26 :   You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DelInventory`(location' at line 1
+12/09/13 13:41:05 :   test
+12/09/13 13:41:05 :   this far
+12/09/13 13:41:05 :   Successful

@@ -1,5 +1,5 @@
 <?php 
-include 'logger.php';
+/*include 'logger.php';
 if(isset($_POST['location'])) {
 	if(!include "../admin/AcidRainDBLogin.php") {
 		slog('In deleteRecord.php: Error including dblogin file');
@@ -18,6 +18,8 @@ slog("test");
 	$delete->close();
 	
 	slog("Successful");
-}
+}*/
+
+
 
 ?>

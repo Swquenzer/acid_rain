@@ -1,6 +1,6 @@
 <?php
 // this script is intended to allow automated update of the stored queries
-
+/*
 $names[0] ='Get_Spreadsheet';
 $queries[0] = <<<'EOD'
 CREATE DEFINER=`devAdmin`@`%` PROCEDURE `Get_Spreadsheet`()
@@ -37,16 +37,22 @@ SELECT `manufacturer`.`ID` AS ManufacturerID, `manufacturer`.`Name` AS Manufactu
 FROM `manufacturer`;
 END
 EOD;
-
-$names[4] = 'DelInventory';
+*/
+/*$names[4] = 'DelInventory';
 $queries[4] = <<<'EOD'
+DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `DelInventory`(location varchar(45), chemical varchar(45), amount smallint(255), mfr varchar(60))
 BEGIN
-SELECT ID 
-FROM `inventory`LEFT JOIN (`chemical` LEFT JOIN `manufacturer` on `chemical`.`MfrID`= `manufacturer`.`ID`) on `inventory`.`ChemicalID` = `chemical`.`ID`
-WHERE `inventory`.`Location`= location AND `chemical`.`Name`= chemical AND `inventory`.`Size`= ammount AND `manufacturer`.`Name`=mfr;
+SELECT `inventory`.`ID` AS delID
+FROM inventory INNER JOIN
+chemical ON inventory.ChemicalID = chemical.ID INNER JOIN
+manufacturer ON chemical.MfrID = manufacturer.ID
+WHERE `inventory`.`Location`= location AND `chemical`.`Name`= chemical AND `inventory`.`Size`= amount AND `manufacturer`.`Name`=mfr;
+DELETE FROM `inventory`
+WHERE `inventory`.`ID` = delID;
 END
 EOD;
+*/
 /*
 $functionNames[0] = 'levenshtein';
 $functions[0] = <<<'EOD'
@@ -106,14 +112,15 @@ BEGIN
   END
 EOD;
 */
-
+/*
 //$devDB->query('DELIMITER $$');
 for ($i =0;$i<count($queries);$i++){
     if(!$devDB->query("DROP procedure IF EXISTS `$names[$i]`;"))
         slog($devDB->error);
     if(!$devDB->multi_query($queries[$i]))
         slog($devDB->error);
-}
+} 
+*/
 /*for ($i =0;$i<count($functions);$i++){
     if(!$devDB->query("DROP function IF EXISTS `$functionNames[$i]`;"))
         slog($devDB->error);
