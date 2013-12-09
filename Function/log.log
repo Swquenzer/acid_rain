@@ -42,3 +42,5 @@
 12/06/13 14:32:01 :   this far
 12/06/13 14:32:01 :   Query did not execute successfully: Column 'ID' in field list is ambiguous
 12/06/13 14:32:01 :   Successful
+12/09/13 19:24:27 :   The user specified as a definer ('devAdmin'@'%') does not exist
+12/09/13 19:30:20 :   The user specified as a definer ('devAdmin'@'%') does not exist
