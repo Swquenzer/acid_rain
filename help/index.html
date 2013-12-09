@@ -158,8 +158,9 @@
 		<a class="anchor" name="3.2"></a>
 		<h2 id="Installation">3.2 - Installation</h2>
 		
-		  <p>Once you have an AMP package installed and running on your machine, you will need to download and install AcidRain onto this server. Go to our <a href="http://www.github.com/Swquenzer/acid_rain/" target="new">repository</a> and download the entire package by clicking the "Download Zip" button:</p>
-          <p><img src="img/1.png" alt="Download from Github"/></p>
+		  <p>Once you have an AMP package installed and running on your machine, you will need to download and install AcidRain onto this server. Go to our <a href="http://www.github.com/Swquenzer/acid_rain/" target="new">repository</a> and click on the "release" link to view the release list. Download the latest release:</p>
+          <p><img src="img/1.png" alt="Find Release from Homepage"/></p>
+		  <p><img src="img/1a.png" alt="Download from Github"/></p>
 		  <p>Extract all the contents onto the root-file system of your server (your AMP package). You can either place the contents directly in the root directory (so that they can simply be accessed in your browser by typing "http://localhost/") as such:</p>
           <p><img src="img/2.png" alt="Root Directory"/></p>
 		  <p>Or you can place them in a subdirectory if you wish (for example, we recommend you create a subdirectory entitled "AcidRain" and place the contents of the bundle inside this directory ("http://localhost/AcidRain/").</p>
@@ -171,7 +172,10 @@
             <p><img src="img/4.png" alt="Create acid_rain Database"/></p>
 			<p>Then, use the import function to create the table structure you need. Import this <a href="acid_rain.sql" target="new">SQL file</a> (It can be found in the "help" directory located inside your main directory for AcidRain) into your database:</p>
 			<p><img src="img/5.png" alt="Import acid_rain.sql"/></p>
-			<p>You will also need to create a user on your database that has access to the database. If it has not been added already, create a global user named "web", with host "localhost", and grant it the privileges of "select" and "execute". However, give it full database-specific privileges.
+			<p>You will also need to create a user on your database that has access to the database. If it has not been added already, create a global user named "web", with host "localhost", and grant it the privileges of "select, insert, update, delete and execute". You do not need to make a specific database for the user, so long as it can access the <b>acid_rain</b> database.
+			<p><img src="img/5a.png" alt="Import acid_rain.sql"/></p>
+			<p><img src="img/5b.png" alt="Import acid_rain.sql"/></p>
+			<p><img src="img/5c.png" alt="Import acid_rain.sql"/></p>
 		
 		<p>Setup should now be complete.</p>
 

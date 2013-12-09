@@ -137,14 +137,14 @@ header #navMenu a:hover {
 	border-radius: 0px 10px 0px 0px;
 }
 #chemical_spreadsheet th.header { 
-	background: #7EDC7E url(../gfx/sortInactive.png) no-repeat 90% 75%;    
+	background: #7EDC7E url(../gfx/sortInactive.png) no-repeat 100% 75%;    
     cursor: pointer;
 }
 #chemical_spreadsheet th.headerSortUp { 
-	background: #61C261 url(../gfx/sortUp.png) no-repeat 90% 85%;
+	background: #61C261 url(../gfx/sortUp.png) no-repeat 100% 85%;
 }
 #chemical_spreadsheet th.headerSortDown { 
-	background: #61C261 url(../gfx/sortDown.png) no-repeat 90% 65%;
+	background: #61C261 url(../gfx/sortDown.png) no-repeat 100% 65%;
 }
 #chemical_spreadsheet td {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;

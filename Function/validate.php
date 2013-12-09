@@ -10,7 +10,7 @@
 			$errors[] = "The item quantity must be an integer number";
 		}
 		#Validate 'size': float-decimal and sign optional
-		if(!preg_match('/^-?([0-9])+([\.|,]([0-9])*)?$/', $itemCount)) {
+		if(!preg_match('/^-?([0-9])+([\.|,]([0-9])*)?$/', $size)) {
 			$errors[] = "The size quantity must be an decimal number";
 		}
 		#Validate chemicalID (At the moment, the add function only works if the chemical already exists in DB)
