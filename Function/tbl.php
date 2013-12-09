@@ -42,7 +42,7 @@ if( isset($_REQUEST['callback'])){
 			break;
          case "addInventoryLoad":
          
-            $stmt =  $db->query("CALL Add_Inventory_preload()");
+            $stmt =  $db->query("CALL Add_Inventory_Preload()");
             if(!$stmt == false){
 			    $numRecs = $stmt->num_rows;
                 for($i=0; $i < $numRecs ; $i++){
