@@ -1,0 +1,349 @@
+.center {
+	text-align: center;
+}
+body {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	background-image: url('../gfx/geometry.gif');
+	margin: 0px;
+	font-size: 14px;
+}
+
+datalist.fake { display: block; float: right; margin-top: -10px }
+
+
+header {
+	margin: 0px 0px 20px;
+	background: #1B291B;
+	border-bottom: solid grey 1px;
+	
+}
+header h1 {
+	margin: auto;
+	padding: 10px 0;
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 40px;
+	font-weight: lighter;
+	letter-spacing: 5px;
+	color: #DCE8DD;
+	-webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+header h1 img {
+	height: 50px;
+	width: 50px;
+	margin-right: 20px;
+}
+
+header #navMenu {
+	display: block;
+	padding: 1px;
+	font-size: 16px;
+	/* font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif; */
+	color: #638566;
+	background: #DCE8DD;
+}
+header #navMenu ul {
+	display: block;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 8px 0;
+	text-align: center; /* Causes child inline-block elements to be centered (even if not centered) */
+}
+header #navMenu li {
+	display: inline-block;
+	padding: 0 10px;
+	list-style-type: none;
+	font-weight: bold;
+	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+}
+header #navMenu a {
+	text-decoration: none;
+	color: #638566;
+}
+header #navMenu a:hover {
+	color: #3E523F;
+}
+input[type=search] {
+	border: 2px #638566 inset;
+}
+thead td input {
+	margin-bottom: 3px;
+	margin-left: 8px;
+}
+header #navMenu input[type=password],
+header #navMenu input[type=text] {
+	border: 2px #638566 inset;
+}
+#errorMessage {
+	font-size: 20px;
+	color: #3E523F;
+}
+
+main {
+	display: block;
+	margin: auto;
+	height: auto;
+	padding: 25px;
+	max-width: 800px;
+	background: white;
+	-webkit-box-shadow: 	0px 0px 15px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    	0px 0px 15px rgba(50, 50, 50, 0.5);
+	box-shadow:         	0px 0px 15px rgba(50, 50, 50, 0.5);
+	-webkit-border-radius: 	10px 10px 10px 10px;
+	border-radius: 		10px 10px 10px 10px;
+	border: 1px solid grey;
+}
+
+.inputField fieldset{
+	max-width: 670px;
+	padding: 5px;
+	margin: 0 auto 10px;
+	background: #EBF7ED;
+}
+.inputField p {
+	display: block;
+	margin: auto auto;
+	padding: 5px;
+	text-align: center;
+	background: white;
+	border: 1px solid #DBDBDB;
+}
+#inputFieldCenter {
+	display: inline-block;
+}
+.inputField label {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+.inputField input {
+	padding: 7px;
+	margin: 5px;
+}
+
+#addInv p{
+	text-align: left;
+	padding-left: 30px;
+}
+
+#spreadsheetError {
+	text-align: center;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: red;
+}
+
+/* CHEMICAL SPREADSHEET STYLES */
+#chemical_spreadsheet {
+	margin: auto;
+	margin-bottom: 10px;
+	max-width: 800px;
+	width: 100%;
+	border-collapse: collapse;
+}
+#chemical_spreadsheet th {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	text-align: left;
+	color: #0E3B0D;
+	padding: 10px 10px 0px 10px;
+	background: #7EDC7E;
+	
+	border-bottom: 4px solid #61C261;
+    	cursor: pointer; 
+}
+#chemical_spreadsheet #th_left {
+	-webkit-border-radius: 10px 0px 0px 0px;
+	border-radius: 10px 0px 0px 0px;
+	width: 4.5em;
+}
+#chemical_spreadsheet #th_right {
+	-webkit-border-radius: 0px 10px 0px 0px;
+	border-radius: 0px 10px 0px 0px;
+}
+#chemical_spreadsheet div.tablesorter-header-inner {
+	display: inline;
+}
+#chemical_spreadsheet th.tablesorter-header:after { 
+	background: #7EDC7E url(../gfx/sortInactive.png) no-repeat 0; /* 100% 75%;     */
+	width: 30px;
+	content: "..";
+	color: transparent;
+	/* background-position: right 5px center; */
+}
+#chemical_spreadsheet th.tablesorter-headerAsc,
+#chemical_spreadsheet th.tablesorter-headerDesc {
+	background-color: #61C261;
+}
+#chemical_spreadsheet th.tablesorter-headerAsc:after { 
+	background: #61C261 url(../gfx/sortUp.png) no-repeat 0; /* 100% 85%; */
+	/* background-position: right 5px center; */
+}
+#chemical_spreadsheet th.tablesorter-headerDesc:after { 
+	background: #61C261 url(../gfx/sortDown.png) no-repeat 0; /* 100% 55%; */
+	/* background-position: right 5px center; */
+}
+#chemical_spreadsheet tbody td {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #146E14;
+	padding: 7px 10px;
+	border-top: 1px solid white;
+	background: #DFFFDE;
+    	cursor: pointer; 
+}
+#chemical_spreadsheet tbody tr:hover td {
+	color: #0E3B0D;
+	background: #C1F2BF;
+}
+#chemical_spreadsheet tbody tr:hover td:nth-child(3):hover {
+	color: #0E3B0D;
+	background: #7EDC7E;
+}
+#chemical_spreadsheet tfoot {
+	text-align: center;
+}
+
+#chemMsg {
+	color: #146E14;
+	padding: 0 0 10px 0;
+}
+#chemMsg div {
+	display: inline-block;
+}
+#chemHiddenRowsMsg {
+	float: right;
+}
+/* FOOTER */
+footer {
+	display: block;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+}
+#footerContent {
+	display: block;
+	margin: 10px auto 20px;
+	max-width: 800px;
+	color: #445660;
+	overflow: auto;
+}
+footer img {
+	float: left;
+	margin: 0 60px 0 20px;
+}
+footer ul {
+	list-style-type: none;
+}
+footer li {
+	display: inline;
+}
+footer a, footer a:visited {
+	color: #445660;
+	text-decoration: none;
+}
+footer a:hover {
+	color: black;
+}
+
+/* Formatting */
+h1 {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 100;
+	color: #1B291B;
+	margin-top: 0px;
+}
+h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: #233623;
+}
+hr {
+	max-width: 90%;
+	color: beige;
+}
+p {
+	margin-left: 20px;
+	line-height: 25px;
+	color: #638566;
+}
+#content {
+	display: block;
+	/* width: 80%;
+	margin: auto; */
+	margin: 0 20px;
+}
+#content a {
+	color: black;
+}
+#content a:hover {
+	text-decoration: none;
+}
+.activePage {
+	color: black !important;
+}
+.errMsg {
+        display: block;
+        width: 90%;
+        color: red;
+        margin: auto;
+        padding: none;
+        font-family: 'Oswald', sans-serif;
+        font-size: 13px;
+}
+span.right { float: right; margin-right: -5px }
+#deleteForm input[type='button'] {
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#popup { display: none }
+#popup.active {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	background-color:rgba(0,0,0,0.8);
+}
+
+#popup > div {
+	background: white;
+	border-radius: 5px;
+	padding: 1px 20px 20px 20px;
+	position: relative;
+	margin: 80px auto 0 auto;
+	width: 400px;
+}
+
+
+#popup form {
+	border: 1px solid black;
+	background: #EBF7ED;
+	padding: 5px;
+}
+#popup form div {
+	background: white;
+	padding: 5px;
+}
+#popup form label { 
+	width: 280px;
+	margin: 0 50px;
+	display: inline-block;
+	line-height: 3em;
+}
+#popup form label span { 
+	display: inline-block;
+	float: right;
+}
+#popupName {
+	text-align: center;
+	font-size: 24px;
+}
+#popupName small {
+	display: block;
+}
+#popupPlace {
+	text-align: center;
+	font-size: 18px;
+}
