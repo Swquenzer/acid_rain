@@ -1,5 +1,5 @@
 <?php
-
+include('admin/AcidRainDBLogin.php');
 session_start();
 date_default_timezone_set("America/New_York");
 ###Form Levels###
@@ -60,6 +60,7 @@ $message = "";
 			//Why can't 'quant' be used here? 
 			document.getElementById('quant').value = temp.toString(); 
         }
+		/* 
         function getLocations(room) {
             //Returns array of locations based on room argument
             var locations = new Array();
@@ -81,13 +82,43 @@ $message = "";
             if(locations.length == 0) console.log("Error returning location array");
             return locations;
         }
+		*/
+		function getLocations(room) {
+			var request;
+			if (window.XMLHttpRequest) {
+				//Modern Browsers
+				request = new XMLHttpRequest();
+			} else {
+				//IE5 & 6
+				request = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			request.onreadystatechange = function() {
+				if(request.readyState == 4 && request.status == 200) {
+					//Change to return location array
+					document.getElementById('locWrapper').innerHTML=request.responseText;
+				}
+			}
+			request.open("GET","get_loc.php?room="+room,"true");
+			request.send();
+		}
         function createLocations(room) {
-			
-            //var locations = getLocations(room);
-            //console.log("in createLocations[0]: " + locations[0]);
-            var rooms = document.getElementById('roomButtons');
-			rooms.style.display="none";
-			var locationsWrapper = document.getElementById('locButtons');
+            var locations = getLocations(room);
+            var roomsWrapper = document.getElementById('roomsWrapper');
+			roomsWrapper.style.display="none";
+			var locationsWrapper = document.getElementById('locWrapper');
+			<?php
+				#Get all rooms from database
+				$query = $db->prepare("SELECT DISTINCT Location FROM inventory WHERE Room=(?)");
+				$query->bind_param('s', $room);
+				$query->execute();
+				if ($result = $query->get_result()) {
+					#Create buttons for each room
+					while ($row = $result->fetch_row()) {
+						echo "<input type='button' value='$row[0]' class='locBut'";
+					}
+					$result->close();
+				}
+			?>
 			for(var i=0; i<locations.length; i++) {
 				var loc = document.createElement('input');
 				loc.type="button";
@@ -159,30 +190,20 @@ $message = "";
 					<label id="roomLbl">Room
 					<span><input list="rooms" name="room tabinex="2" placeholder="35b" required /></span>
 					</label>
-					<span id="roomButtons">
+					<span id="roomsWrapper">
 						<?php
-							require('admin/AcidRainDBLogin.php');
 							if ($result = $db->query("SELECT DISTINCT Room FROM inventory")) {
-									while ($row = $result->fetch_row()) {
-										echo "<input type='button' value='$row[0]' class='roomBut' onclick='createLocations(this.value)'>";
-									}
-									$result->close();
+								while ($row = $result->fetch_row()) {
+									echo "<input type='button' value='$row[0]' class='roomBut' onclick='createLocations(this.value)'>";
 								}
+								$result->close();
+							}
 						?>
-						<!--
-						<input type="button" value="35" class="roomBut" onclick="createLocations(this.value)">
-						<input type="button" value="35b" class="roomBut" onclick="createLocations(this.value)">
-						<input type="button" value="25a" class="roomBut" onclick="createLocations(this.value)">
-						<input type="button" value="26/36" class="roomBut" onclick="createLocations(this.value)">
-						<input type="button" value="54" class="roomBut" onclick="createLocations(this.value)">
-						<input type="button" value="39" class="roomBut" onclick="createLocations(this.value)">
-						<input type="button" value="41a" class="roomBut" onclick="createLocations(this.value)">
-						-->
 					</span>
 					<label id="locationLbl">Location
 					<span><input list="location" name="location" tabinex="3" placeholder="Storeroom Front"  required /></span>
 					</label>
-					<span id="locButtons">
+					<span id="locWrapper">
 					</span>
 					<label id="quantLbl">Quantity
 					<span><input type="number" name="quant" id="quant" tabinex="4" placeholder="4" value="0" required /></span>
